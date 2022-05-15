@@ -1,0 +1,12 @@
+tasks:
+  Run all Suites:
+    shell: python -m robot --report NONE --outputdir output TESTS/TestSuites
+
+condaConfigFile: conda.yaml
+artifactsDir: output
+PATH:
+  - .
+PYTHONPATH:
+  - .
+ignoreFiles:
+  - .gitignore
