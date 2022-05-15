@@ -1,0 +1,69 @@
+==============================================================================
+TestSuites                                                                    
+==============================================================================
+TestSuites.PB :: Test sur toutes les actions de la page de connexion pour t...
+==============================================================================
+START SUITE
+CURDIR=C:\Users\aassoula\OneDrive - Capgemini\Desktop\Anah\DEMO RBF\Autom\SOCLE
+EXECDIR=C:\Users\aassoula\OneDrive - Capgemini\Desktop\Anah\DEMO RBF\Autom
+OUTPUT DIR=C:\Users\aassoula\OneDrive - Capgemini\Desktop\Anah\DEMO RBF\Autom\output
+ENV=RECETTE
+WEB-PLATFORM=CHROME
+WEB-SCREEN=DESKTOP
+ création un dossier RG et un compte demandeur PB                     
+START TEST
+| FAIL |
+No keyword with name 'KwLaunchCloseLogout.Kw_launch_browser' found.
+------------------------------------------------------------------------------
+completer la demande PB                                               
+START TEST
+| FAIL |
+No keyword with name 'Given l'utilisateur est sur la page de connexion' found.
+------------------------------------------------------------------------------
+TestSuites.PB :: Test sur toutes les actions de la page de connexi... | FAIL |
+2 tests, 0 passed, 2 failed
+==============================================================================
+TestSuites.TNR1 :: Test sur toutes les actions de la page de connexion pour...
+==============================================================================
+START SUITE
+CURDIR=C:\Users\aassoula\OneDrive - Capgemini\Desktop\Anah\DEMO RBF\Autom\SOCLE
+EXECDIR=C:\Users\aassoula\OneDrive - Capgemini\Desktop\Anah\DEMO RBF\Autom
+OUTPUT DIR=C:\Users\aassoula\OneDrive - Capgemini\Desktop\Anah\DEMO RBF\Autom\output
+ENV=RECETTE
+WEB-PLATFORM=CHROME
+WEB-SCREEN=DESKTOP
+TNR 1                                                                 
+START TEST
+| FAIL |
+Element with locator '//*[@id="$PD_pyMyCasesTree$ppxResults$l1"]//div[@data-test-id='2019100915472206281040439' and contains(text(),'MPR')]' not found.
+------------------------------------------------------------------------------
+TestSuites.TNR1 :: Test sur toutes les actions de la page de conne... | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+TestSuites.TS login :: Test sur toutes les actions de la page de connexion ...
+==============================================================================
+START SUITE
+CURDIR=C:\Users\aassoula\OneDrive - Capgemini\Desktop\Anah\DEMO RBF\Autom\SOCLE
+EXECDIR=C:\Users\aassoula\OneDrive - Capgemini\Desktop\Anah\DEMO RBF\Autom
+OUTPUT DIR=C:\Users\aassoula\OneDrive - Capgemini\Desktop\Anah\DEMO RBF\Autom\output
+ENV=RECETTE
+WEB-PLATFORM=CHROME
+WEB-SCREEN=DESKTOP
+création un dossier RG et un compte demandeur PO                      
+START TEST
+| FAIL |
+No keyword with name 'KwLaunchCloseLogout.Kw_launch_browser' found.
+------------------------------------------------------------------------------
+activation de compte créé par un admin                                
+START TEST
+| FAIL |
+No keyword with name 'KwLaunchCloseLogout.Kw_launch_browser' found.
+------------------------------------------------------------------------------
+TestSuites.TS login :: Test sur toutes les actions de la page de c... | FAIL |
+2 tests, 0 passed, 2 failed
+==============================================================================
+TestSuites                                                            | FAIL |
+5 tests, 0 passed, 5 failed
+==============================================================================
+Output:  C:\Users\aassoula\OneDrive - Capgemini\Desktop\Anah\DEMO RBF\Autom\output\output.xml
+Log:     C:\Users\aassoula\OneDrive - Capgemini\Desktop\Anah\DEMO RBF\Autom\output\log.html

@@ -1,0 +1,7 @@
+C:\Users\aassoula\AppData\Local\robocorp\holotree\5a1fac3c5_9fcd2534\lib\site-packages\selenium\webdriver\firefox\firefox_profile.py:208: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  if setting is None or setting is '':
+[ ERROR ] Error in file 'C:\Users\aassoula\OneDrive - Capgemini\Desktop\Anah\DEMO RBF\Autom\TESTS\Web\Steps\StepsCreationDossier.robot' on line 14: Resource file '..\..\..\SOCLE\Libs\KwLaunchCloseLogout.robot' does not exist.
+[ ERROR ] Error in file 'C:\Users\aassoula\OneDrive - Capgemini\Desktop\Anah\DEMO RBF\Autom\TESTS\Web\Steps\StepsCompleterDemande.robot' on line 14: Resource file '..\..\..\SOCLE\Libs\KwLaunchCloseLogout.robot' does not exist.
+[ WARN ] Imported resource file 'C:\Users\aassoula\OneDrive - Capgemini\Desktop\Anah\DEMO RBF\Autom\TESTS\Web\POMs\NumFi.robot' is empty.
+[ ERROR ] Error in file 'C:\Users\aassoula\OneDrive - Capgemini\Desktop\Anah\DEMO RBF\Autom\TESTS\Web\Steps\StepsCreationDossier.robot' on line 14: Resource file '..\..\..\SOCLE\Libs\KwLaunchCloseLogout.robot' does not exist.
+[ ERROR ] Error in file 'C:\Users\aassoula\OneDrive - Capgemini\Desktop\Anah\DEMO RBF\Autom\TESTS\Web\Steps\StepsCompleterDemande.robot' on line 14: Resource file '..\..\..\SOCLE\Libs\KwLaunchCloseLogout.robot' does not exist.

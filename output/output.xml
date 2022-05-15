@@ -1,0 +1,1171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.1 (Python 3.9.2 on win32)" generated="20220515 20:28:37.629" rpa="false" schemaversion="2">
+<suite id="s1" name="TestSuites" source="C:\Users\aassoula\OneDrive - Capgemini\Desktop\Anah\DEMO RBF\Autom\TESTS\TestSuites">
+<suite id="s1-s1" name="PB" source="C:\Users\aassoula\OneDrive - Capgemini\Desktop\Anah\DEMO RBF\Autom\TESTS\TestSuites\PB.robot">
+<kw name="SuiteSetup" library="baseTest" type="SETUP">
+<kw name="Suite Setup" library="baseSocle">
+<kw name="Log To Console" library="BuiltIn">
+<arg>START SUITE</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220515 20:28:38.774" endtime="20220515 20:28:38.774"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>CURDIR=C:\\Users\\aassoula\\OneDrive - Capgemini\\Desktop\\Anah\\DEMO RBF\\Autom\\SOCLE</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220515 20:28:38.775" endtime="20220515 20:28:38.775"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>EXECDIR=${EXECDIR}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220515 20:28:38.775" endtime="20220515 20:28:38.776"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>OUTPUT DIR=${OUTPUT DIR}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220515 20:28:38.777" endtime="20220515 20:28:38.777"/>
+</kw>
+<kw name="Get Environment Variable" library="OperatingSystem">
+<var>${RBF_ENV}</var>
+<arg>RBF_ENV</arg>
+<arg>default=DEFAULT</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<msg timestamp="20220515 20:28:38.780" level="INFO">${RBF_ENV} = DEFAULT</msg>
+<status status="PASS" starttime="20220515 20:28:38.778" endtime="20220515 20:28:38.780"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${RBF_ENV}&quot; != &quot;DEFAULT&quot;">
+<kw name="Evaluate" library="BuiltIn">
+<var>${ENV}</var>
+<arg>"${RBF_ENV}"</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20220515 20:28:38.780" endtime="20220515 20:28:38.780"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${PLATFORM}</var>
+<arg>"${PIC_PLATFORM}"</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20220515 20:28:38.781" endtime="20220515 20:28:38.781"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${ENV}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20220515 20:28:38.782" endtime="20220515 20:28:38.782"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${PLATFORM}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20220515 20:28:38.782" endtime="20220515 20:28:38.782"/>
+</kw>
+<status status="NOT RUN" starttime="20220515 20:28:38.780" endtime="20220515 20:28:38.782"/>
+</branch>
+<status status="PASS" starttime="20220515 20:28:38.780" endtime="20220515 20:28:38.782"/>
+</if>
+<kw name="Log To Console" library="BuiltIn">
+<arg>ENV=${ENV}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220515 20:28:38.782" endtime="20220515 20:28:38.783"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>WEB-PLATFORM=${PLATFORM}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220515 20:28:38.783" endtime="20220515 20:28:38.784"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>WEB-SCREEN=${SCREEN}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220515 20:28:38.785" endtime="20220515 20:28:38.786"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'''${PLATFORM}''' not in '''${PLATFORMS_ALLOWED}'''</arg>
+<arg>BuiltIn.Fail</arg>
+<arg>PLATFORM_NOT_ALLOWED</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220515 20:28:38.786" endtime="20220515 20:28:38.787"/>
+</kw>
+<kw name="Get Dictionary Keys" library="Collections">
+<var>${SCREENS_ALLLOWED}</var>
+<arg>${SCREEN_SIZES_ALLOWED}</arg>
+<doc>Returns keys of the given ``dictionary`` as a list.</doc>
+<msg timestamp="20220515 20:28:38.788" level="INFO">${SCREENS_ALLLOWED} = ['DESKTOP']</msg>
+<status status="PASS" starttime="20220515 20:28:38.787" endtime="20220515 20:28:38.788"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'''${SCREEN}''' not in '''${SCREENS_ALLLOWED}'''</arg>
+<arg>BuiltIn.Fail</arg>
+<arg>SCREEN_NOT_ALLOWED</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220515 20:28:38.788" endtime="20220515 20:28:38.788"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:38.772" endtime="20220515 20:28:38.788"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:38.771" endtime="20220515 20:28:38.788"/>
+</kw>
+<test id="s1-s1-t1" name=" création un dossier RG et un compte demandeur PB">
+<kw name="TestSetup" library="baseTest" type="SETUP">
+<kw name="Import Resource" library="BuiltIn">
+<arg>C:\\Users\\aassoula\\OneDrive - Capgemini\\Desktop\\Anah\\DEMO RBF\\Autom\\TESTS/Env/ENV_${ENV}.robot</arg>
+<doc>Imports a resource file with the given path.</doc>
+<status status="PASS" starttime="20220515 20:28:38.788" endtime="20220515 20:28:38.788"/>
+</kw>
+<kw name="Import Resource" library="BuiltIn">
+<arg>C:\\Users\\aassoula\\OneDrive - Capgemini\\Desktop\\Anah\\DEMO RBF\\Autom\\TESTS/Data/DATA_${ENV}.robot</arg>
+<doc>Imports a resource file with the given path.</doc>
+<status status="PASS" starttime="20220515 20:28:38.793" endtime="20220515 20:28:38.798"/>
+</kw>
+<kw name="Test Setup" library="baseSocle">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${EMPTY}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220515 20:28:38.799" endtime="20220515 20:28:38.804"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>START TEST</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220515 20:28:38.804" endtime="20220515 20:28:38.804"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${isTestWEB}</var>
+<arg>"""WEB""" in """${TEST TAGS}"""</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220515 20:28:38.805" level="INFO">${isTestWEB} = True</msg>
+<status status="PASS" starttime="20220515 20:28:38.805" endtime="20220515 20:28:38.805"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${isTestWEB}</arg>
+<arg>BuiltIn.Run Keyword</arg>
+<arg>SELENIUM.Open ${PLATFORM}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>SELENIUM.Open ${PLATFORM}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Open CHROME" library="selenium">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220515 20:28:38.808" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220515 20:28:38.807" endtime="20220515 20:28:41.216"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:38.806" endtime="20220515 20:28:41.216"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:38.806" endtime="20220515 20:28:41.217"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:38.806" endtime="20220515 20:28:41.217"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${SCREEN_SIZE}</var>
+<arg>${SCREEN_SIZES_ALLOWED}</arg>
+<arg>${SCREEN}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20220515 20:28:41.218" level="INFO">${SCREEN_SIZE} = 1260</msg>
+<status status="PASS" starttime="20220515 20:28:41.217" endtime="20220515 20:28:41.218"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${isTestWEB}</arg>
+<arg>BuiltIn.Run Keyword</arg>
+<arg>SELENIUM.Init Conf</arg>
+<arg>screen=${SCREEN_SIZE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>SELENIUM.Init Conf</arg>
+<arg>screen=${SCREEN_SIZE}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Init Conf" library="selenium">
+<arg>screen=${SCREEN_SIZE}</arg>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>${SELENIUM_TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20220515 20:28:41.221" endtime="20220515 20:28:41.226"/>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<arg>${SELENIUM_IMPLICITWAIT}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220515 20:28:41.226" endtime="20220515 20:28:41.230"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${SELENIUM_SPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220515 20:28:41.230" endtime="20220515 20:28:41.231"/>
+</kw>
+<if>
+<branch type="IF" condition="${screen} == ${0}">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20220515 20:28:41.231" endtime="20220515 20:28:41.231"/>
+</kw>
+<status status="NOT RUN" starttime="20220515 20:28:41.231" endtime="20220515 20:28:41.231"/>
+</branch>
+<branch type="ELSE">
+<kw name="Set Window Size" library="SeleniumLibrary">
+<arg>height=850</arg>
+<arg>width=${screen}</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" starttime="20220515 20:28:41.234" endtime="20220515 20:28:41.383"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:41.234" endtime="20220515 20:28:41.383"/>
+</branch>
+<status status="PASS" starttime="20220515 20:28:41.231" endtime="20220515 20:28:41.383"/>
+</if>
+<status status="PASS" starttime="20220515 20:28:41.220" endtime="20220515 20:28:41.383"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:41.220" endtime="20220515 20:28:41.384"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:41.219" endtime="20220515 20:28:41.384"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:38.799" endtime="20220515 20:28:41.384"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:38.788" endtime="20220515 20:28:41.385"/>
+</kw>
+<kw name="Given l'utilisateur est sur la page d'accueil et a lancé une demande" library="StepsCreationDossier">
+<kw name="KwLaunchCloseLogout.Kw_launch_browser">
+<arg>${site_web}[url]</arg>
+<arg>${site_web}[title]</arg>
+<msg timestamp="20220515 20:28:41.419" level="FAIL">No keyword with name 'KwLaunchCloseLogout.Kw_launch_browser' found.</msg>
+<status status="FAIL" starttime="20220515 20:28:41.419" endtime="20220515 20:28:41.420"/>
+</kw>
+<kw name="retour à l'accueil" library="Login">
+<status status="NOT RUN" starttime="20220515 20:28:41.421" endtime="20220515 20:28:41.421"/>
+</kw>
+<status status="FAIL" starttime="20220515 20:28:41.386" endtime="20220515 20:28:41.422"/>
+</kw>
+<kw name="And l'utilisateur de profil demandeur a choisit le profil PB a renseigné le numero fiscal" library="StepsCreationDossier">
+<arg>numFiscal=2003199999017</arg>
+<status status="NOT RUN" starttime="20220515 20:28:41.423" endtime="20220515 20:28:41.423"/>
+</kw>
+<kw name="Then l'utilisateur et redirigé à la page de confirmation" library="StepsCreationDossier">
+<status status="NOT RUN" starttime="20220515 20:28:41.423" endtime="20220515 20:28:41.423"/>
+</kw>
+<tag>WEB</tag>
+<status status="FAIL" starttime="20220515 20:28:38.788" endtime="20220515 20:28:41.423">No keyword with name 'KwLaunchCloseLogout.Kw_launch_browser' found.</status>
+</test>
+<test id="s1-s1-t2" name="completer la demande PB">
+<kw name="TestSetup" library="baseTest" type="SETUP">
+<kw name="Import Resource" library="BuiltIn">
+<arg>C:\\Users\\aassoula\\OneDrive - Capgemini\\Desktop\\Anah\\DEMO RBF\\Autom\\TESTS/Env/ENV_${ENV}.robot</arg>
+<doc>Imports a resource file with the given path.</doc>
+<status status="PASS" starttime="20220515 20:28:41.433" endtime="20220515 20:28:41.439"/>
+</kw>
+<kw name="Import Resource" library="BuiltIn">
+<arg>C:\\Users\\aassoula\\OneDrive - Capgemini\\Desktop\\Anah\\DEMO RBF\\Autom\\TESTS/Data/DATA_${ENV}.robot</arg>
+<doc>Imports a resource file with the given path.</doc>
+<status status="PASS" starttime="20220515 20:28:41.440" endtime="20220515 20:28:41.445"/>
+</kw>
+<kw name="Test Setup" library="baseSocle">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${EMPTY}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220515 20:28:41.447" endtime="20220515 20:28:41.458"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>START TEST</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220515 20:28:41.459" endtime="20220515 20:28:41.460"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${isTestWEB}</var>
+<arg>"""WEB""" in """${TEST TAGS}"""</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220515 20:28:41.463" level="INFO">${isTestWEB} = True</msg>
+<status status="PASS" starttime="20220515 20:28:41.461" endtime="20220515 20:28:41.464"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${isTestWEB}</arg>
+<arg>BuiltIn.Run Keyword</arg>
+<arg>SELENIUM.Open ${PLATFORM}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>SELENIUM.Open ${PLATFORM}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Open CHROME" library="selenium">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220515 20:28:41.470" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220515 20:28:41.470" endtime="20220515 20:28:44.228"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:41.468" endtime="20220515 20:28:44.229"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:41.465" endtime="20220515 20:28:44.229"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:41.465" endtime="20220515 20:28:44.229"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${SCREEN_SIZE}</var>
+<arg>${SCREEN_SIZES_ALLOWED}</arg>
+<arg>${SCREEN}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20220515 20:28:44.230" level="INFO">${SCREEN_SIZE} = 1260</msg>
+<status status="PASS" starttime="20220515 20:28:44.229" endtime="20220515 20:28:44.230"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${isTestWEB}</arg>
+<arg>BuiltIn.Run Keyword</arg>
+<arg>SELENIUM.Init Conf</arg>
+<arg>screen=${SCREEN_SIZE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>SELENIUM.Init Conf</arg>
+<arg>screen=${SCREEN_SIZE}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Init Conf" library="selenium">
+<arg>screen=${SCREEN_SIZE}</arg>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>${SELENIUM_TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20220515 20:28:44.236" endtime="20220515 20:28:44.250"/>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<arg>${SELENIUM_IMPLICITWAIT}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220515 20:28:44.252" endtime="20220515 20:28:44.257"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${SELENIUM_SPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220515 20:28:44.257" endtime="20220515 20:28:44.259"/>
+</kw>
+<if>
+<branch type="IF" condition="${screen} == ${0}">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20220515 20:28:44.262" endtime="20220515 20:28:44.262"/>
+</kw>
+<status status="NOT RUN" starttime="20220515 20:28:44.262" endtime="20220515 20:28:44.262"/>
+</branch>
+<branch type="ELSE">
+<kw name="Set Window Size" library="SeleniumLibrary">
+<arg>height=850</arg>
+<arg>width=${screen}</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" starttime="20220515 20:28:44.262" endtime="20220515 20:28:44.391"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:44.262" endtime="20220515 20:28:44.391"/>
+</branch>
+<status status="PASS" starttime="20220515 20:28:44.259" endtime="20220515 20:28:44.391"/>
+</if>
+<status status="PASS" starttime="20220515 20:28:44.233" endtime="20220515 20:28:44.392"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:44.232" endtime="20220515 20:28:44.392"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:44.231" endtime="20220515 20:28:44.392"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:41.446" endtime="20220515 20:28:44.392"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:41.431" endtime="20220515 20:28:44.392"/>
+</kw>
+<kw name="Given l'utilisateur est sur la page de connexion">
+<msg timestamp="20220515 20:28:44.408" level="FAIL">No keyword with name 'Given l'utilisateur est sur la page de connexion' found.</msg>
+<status status="FAIL" starttime="20220515 20:28:44.408" endtime="20220515 20:28:44.408"/>
+</kw>
+<kw name="And l'utilisateur renseigne les champs &quot;Email&quot; et &quot;Mot de passe&quot;" library="StepsCompleterDemande">
+<arg>email=took@yopmail.com</arg>
+<arg>mdp= @azertY147</arg>
+<status status="NOT RUN" starttime="20220515 20:28:44.409" endtime="20220515 20:28:44.409"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1000s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220515 20:28:44.409" endtime="20220515 20:28:44.409"/>
+</kw>
+<tag>WEB</tag>
+<status status="FAIL" starttime="20220515 20:28:41.429" endtime="20220515 20:28:44.410">No keyword with name 'Given l'utilisateur est sur la page de connexion' found.</status>
+</test>
+<doc>Test sur toutes les actions de la page de connexion pour tous les rôles.</doc>
+<status status="FAIL" starttime="20220515 20:28:37.715" endtime="20220515 20:28:44.412"/>
+</suite>
+<suite id="s1-s2" name="TNR1" source="C:\Users\aassoula\OneDrive - Capgemini\Desktop\Anah\DEMO RBF\Autom\TESTS\TestSuites\TNR1.robot">
+<kw name="SuiteSetup" library="baseTest" type="SETUP">
+<kw name="Suite Setup" library="baseSocle">
+<kw name="Log To Console" library="BuiltIn">
+<arg>START SUITE</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220515 20:28:44.717" endtime="20220515 20:28:44.718"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>CURDIR=C:\\Users\\aassoula\\OneDrive - Capgemini\\Desktop\\Anah\\DEMO RBF\\Autom\\SOCLE</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220515 20:28:44.719" endtime="20220515 20:28:44.721"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>EXECDIR=${EXECDIR}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220515 20:28:44.721" endtime="20220515 20:28:44.723"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>OUTPUT DIR=${OUTPUT DIR}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220515 20:28:44.723" endtime="20220515 20:28:44.725"/>
+</kw>
+<kw name="Get Environment Variable" library="OperatingSystem">
+<var>${RBF_ENV}</var>
+<arg>RBF_ENV</arg>
+<arg>default=DEFAULT</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<msg timestamp="20220515 20:28:44.727" level="INFO">${RBF_ENV} = DEFAULT</msg>
+<status status="PASS" starttime="20220515 20:28:44.726" endtime="20220515 20:28:44.727"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${RBF_ENV}&quot; != &quot;DEFAULT&quot;">
+<kw name="Evaluate" library="BuiltIn">
+<var>${ENV}</var>
+<arg>"${RBF_ENV}"</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20220515 20:28:44.729" endtime="20220515 20:28:44.729"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${PLATFORM}</var>
+<arg>"${PIC_PLATFORM}"</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20220515 20:28:44.729" endtime="20220515 20:28:44.730"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${ENV}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20220515 20:28:44.731" endtime="20220515 20:28:44.731"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${PLATFORM}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20220515 20:28:44.731" endtime="20220515 20:28:44.732"/>
+</kw>
+<status status="NOT RUN" starttime="20220515 20:28:44.728" endtime="20220515 20:28:44.732"/>
+</branch>
+<status status="PASS" starttime="20220515 20:28:44.727" endtime="20220515 20:28:44.732"/>
+</if>
+<kw name="Log To Console" library="BuiltIn">
+<arg>ENV=${ENV}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220515 20:28:44.732" endtime="20220515 20:28:44.734"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>WEB-PLATFORM=${PLATFORM}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220515 20:28:44.735" endtime="20220515 20:28:44.737"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>WEB-SCREEN=${SCREEN}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220515 20:28:44.737" endtime="20220515 20:28:44.741"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'''${PLATFORM}''' not in '''${PLATFORMS_ALLOWED}'''</arg>
+<arg>BuiltIn.Fail</arg>
+<arg>PLATFORM_NOT_ALLOWED</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220515 20:28:44.741" endtime="20220515 20:28:44.742"/>
+</kw>
+<kw name="Get Dictionary Keys" library="Collections">
+<var>${SCREENS_ALLLOWED}</var>
+<arg>${SCREEN_SIZES_ALLOWED}</arg>
+<doc>Returns keys of the given ``dictionary`` as a list.</doc>
+<msg timestamp="20220515 20:28:44.745" level="INFO">${SCREENS_ALLLOWED} = ['DESKTOP']</msg>
+<status status="PASS" starttime="20220515 20:28:44.744" endtime="20220515 20:28:44.745"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'''${SCREEN}''' not in '''${SCREENS_ALLLOWED}'''</arg>
+<arg>BuiltIn.Fail</arg>
+<arg>SCREEN_NOT_ALLOWED</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220515 20:28:44.746" endtime="20220515 20:28:44.747"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:44.716" endtime="20220515 20:28:44.748"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:44.715" endtime="20220515 20:28:44.748"/>
+</kw>
+<test id="s1-s2-t1" name="TNR 1">
+<kw name="TestSetup" library="baseTest" type="SETUP">
+<kw name="Import Resource" library="BuiltIn">
+<arg>C:\\Users\\aassoula\\OneDrive - Capgemini\\Desktop\\Anah\\DEMO RBF\\Autom\\TESTS/Env/ENV_${ENV}.robot</arg>
+<doc>Imports a resource file with the given path.</doc>
+<status status="PASS" starttime="20220515 20:28:44.755" endtime="20220515 20:28:44.758"/>
+</kw>
+<kw name="Import Resource" library="BuiltIn">
+<arg>C:\\Users\\aassoula\\OneDrive - Capgemini\\Desktop\\Anah\\DEMO RBF\\Autom\\TESTS/Data/DATA_${ENV}.robot</arg>
+<doc>Imports a resource file with the given path.</doc>
+<status status="PASS" starttime="20220515 20:28:44.758" endtime="20220515 20:28:44.763"/>
+</kw>
+<kw name="Test Setup" library="baseSocle">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${EMPTY}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220515 20:28:44.770" endtime="20220515 20:28:44.778"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>START TEST</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220515 20:28:44.778" endtime="20220515 20:28:44.779"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${isTestWEB}</var>
+<arg>"""WEB""" in """${TEST TAGS}"""</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220515 20:28:44.783" level="INFO">${isTestWEB} = True</msg>
+<status status="PASS" starttime="20220515 20:28:44.780" endtime="20220515 20:28:44.784"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${isTestWEB}</arg>
+<arg>BuiltIn.Run Keyword</arg>
+<arg>SELENIUM.Open ${PLATFORM}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>SELENIUM.Open ${PLATFORM}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Open CHROME" library="selenium">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220515 20:28:44.792" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220515 20:28:44.791" endtime="20220515 20:28:47.709"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:44.789" endtime="20220515 20:28:47.709"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:44.788" endtime="20220515 20:28:47.709"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:44.785" endtime="20220515 20:28:47.710"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${SCREEN_SIZE}</var>
+<arg>${SCREEN_SIZES_ALLOWED}</arg>
+<arg>${SCREEN}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20220515 20:28:47.711" level="INFO">${SCREEN_SIZE} = 1260</msg>
+<status status="PASS" starttime="20220515 20:28:47.710" endtime="20220515 20:28:47.711"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${isTestWEB}</arg>
+<arg>BuiltIn.Run Keyword</arg>
+<arg>SELENIUM.Init Conf</arg>
+<arg>screen=${SCREEN_SIZE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>SELENIUM.Init Conf</arg>
+<arg>screen=${SCREEN_SIZE}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Init Conf" library="selenium">
+<arg>screen=${SCREEN_SIZE}</arg>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>${SELENIUM_TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20220515 20:28:47.715" endtime="20220515 20:28:47.724"/>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<arg>${SELENIUM_IMPLICITWAIT}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220515 20:28:47.724" endtime="20220515 20:28:47.728"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${SELENIUM_SPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220515 20:28:47.728" endtime="20220515 20:28:47.729"/>
+</kw>
+<if>
+<branch type="IF" condition="${screen} == ${0}">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20220515 20:28:47.731" endtime="20220515 20:28:47.731"/>
+</kw>
+<status status="NOT RUN" starttime="20220515 20:28:47.731" endtime="20220515 20:28:47.731"/>
+</branch>
+<branch type="ELSE">
+<kw name="Set Window Size" library="SeleniumLibrary">
+<arg>height=850</arg>
+<arg>width=${screen}</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" starttime="20220515 20:28:47.731" endtime="20220515 20:28:47.882"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:47.731" endtime="20220515 20:28:47.882"/>
+</branch>
+<status status="PASS" starttime="20220515 20:28:47.729" endtime="20220515 20:28:47.882"/>
+</if>
+<status status="PASS" starttime="20220515 20:28:47.713" endtime="20220515 20:28:47.882"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:47.712" endtime="20220515 20:28:47.883"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:47.711" endtime="20220515 20:28:47.883"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:44.766" endtime="20220515 20:28:47.883"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:44.752" endtime="20220515 20:28:47.884"/>
+</kw>
+<kw name="Montage du dossier de subvention pour un profil TMO" library="MontageDossierSub">
+<doc>L'utilisateur accède à la page de connexion</doc>
+<kw name="lancer le navigateur et l'environnement" library="PreparationEnv">
+<arg>${site_web}[url]</arg>
+<arg>${site_web}[title]</arg>
+<doc>Lancement de l'application dans un navigateur
+${URL} Url de l'application à lancer
+${browser} Navigateur à utiliser
+${exceptedTitle} Titre de la page attendue</doc>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220515 20:28:47.912" level="INFO">Opening url 'https://auth-preprod.anah.fr/saml/singleSignOn'</msg>
+<status status="PASS" starttime="20220515 20:28:47.912" endtime="20220515 20:28:48.767"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220515 20:28:48.768" endtime="20220515 20:28:48.909"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${currentTitle}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20220515 20:28:48.926" level="INFO">${currentTitle} = Portail d'authentification</msg>
+<status status="PASS" starttime="20220515 20:28:48.910" endtime="20220515 20:28:48.926"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${exceptedTitle}</arg>
+<arg>${currentTitle}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220515 20:28:48.927" endtime="20220515 20:28:48.928"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:47.912" endtime="20220515 20:28:48.928"/>
+</kw>
+<kw name="se connecter au compte demandeur par le portail SSO" library="Login">
+<arg>tnr3@yopmail.com</arg>
+<arg>@azertY147</arg>
+<doc>Connexion à l'application
+${input_userName} Username de l'utilisateur
+${input_pwd} Mot de passe de l'utilisateur</doc>
+<kw name="Kw_load_login_page" library="Login">
+<doc>Vérifie que les éléments de la pages de connexion sont bien présents</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${loc_email}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220515 20:28:48.949" endtime="20220515 20:28:49.023"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${loc_mdp}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220515 20:28:49.024" endtime="20220515 20:28:49.078"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:48.948" endtime="20220515 20:28:49.079"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${loc_email}</arg>
+<arg>${input_userName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220515 20:28:49.080" level="INFO">Typing text 'tnr3@yopmail.com' into text field '//input[@id="userfield"]'.</msg>
+<status status="PASS" starttime="20220515 20:28:49.079" endtime="20220515 20:28:49.323"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${loc_mdp}</arg>
+<arg>${input_pwd}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220515 20:28:49.327" level="INFO">Typing password into text field '//input[@id="passwordfield"]'.</msg>
+<msg timestamp="20220515 20:28:49.414" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220515 20:28:49.613" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220515 20:28:49.324" endtime="20220515 20:28:49.614"/>
+</kw>
+<kw name="Click If Element Is Enabled" library="selenium">
+<arg>${loc_valider}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10</arg>
+<arg>1s</arg>
+<arg>Scroll Element Into View</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220515 20:28:49.619" endtime="20220515 20:28:49.985"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:49.618" endtime="20220515 20:28:49.986"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220515 20:28:49.986" endtime="20220515 20:28:50.061"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10</arg>
+<arg>1s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220515 20:28:50.064" level="INFO">Clicking element '//button[@type="submit"]/span'.</msg>
+<status status="PASS" starttime="20220515 20:28:50.063" endtime="20220515 20:28:50.469"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:50.062" endtime="20220515 20:28:50.470"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:49.614" endtime="20220515 20:28:50.471"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:48.946" endtime="20220515 20:28:50.471"/>
+</kw>
+<kw name="copier le numero de dossier et acceder au dossier" library="MyApplications">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${NumDossier}</var>
+<arg>${loc-NumDossier}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220515 20:28:55.802" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220515 20:28:55.524" endtime="20220515 20:28:55.803"/>
+</kw>
+<msg timestamp="20220515 20:28:55.807" level="FAIL">Element with locator '//*[@id="$PD_pyMyCasesTree$ppxResults$l1"]//div[@data-test-id='2019100915472206281040439' and contains(text(),'MPR')]' not found.</msg>
+<status status="FAIL" starttime="20220515 20:28:50.474" endtime="20220515 20:28:55.807"/>
+</kw>
+<kw name="Click If Element Is Enabled" library="selenium">
+<arg>${VoirDossier}</arg>
+<status status="NOT RUN" starttime="20220515 20:28:55.807" endtime="20220515 20:28:55.807"/>
+</kw>
+<status status="FAIL" starttime="20220515 20:28:50.472" endtime="20220515 20:28:55.807"/>
+</kw>
+<kw name="Completer ma demande de solde" library="Dossier">
+<status status="NOT RUN" starttime="20220515 20:28:55.807" endtime="20220515 20:28:55.807"/>
+</kw>
+<kw name="deposer une demande sans mandataire" library="Mandataire">
+<status status="NOT RUN" starttime="20220515 20:28:55.807" endtime="20220515 20:28:55.807"/>
+</kw>
+<kw name=" choisir chauffage par biomasse" library="TypeChauffage">
+<status status="NOT RUN" starttime="20220515 20:28:55.807" endtime="20220515 20:28:55.807"/>
+</kw>
+<kw name="choisir travaux d'isolation" library="Travaux">
+<status status="NOT RUN" starttime="20220515 20:28:55.807" endtime="20220515 20:28:55.807"/>
+</kw>
+<kw name="choisir travaux d'isolation intern" library="SousTravaux">
+<status status="NOT RUN" starttime="20220515 20:28:55.807" endtime="20220515 20:28:55.807"/>
+</kw>
+<kw name="televerser le premier devis" library="Devis">
+<status status="NOT RUN" starttime="20220515 20:28:55.807" endtime="20220515 20:28:55.807"/>
+</kw>
+<kw name="renseingner les informations travaux d'isolation interieur" library="Siret">
+<status status="NOT RUN" starttime="20220515 20:28:55.807" endtime="20220515 20:28:55.807"/>
+</kw>
+<kw name="renseingner le montant du premier travaux" library="Somme">
+<status status="NOT RUN" starttime="20220515 20:28:55.807" endtime="20220515 20:28:55.807"/>
+</kw>
+<kw name=" choisir non pour les aides" library="Cee">
+<status status="NOT RUN" starttime="20220515 20:28:55.807" endtime="20220515 20:28:55.807"/>
+</kw>
+<kw name=" verifier la syntèse et Continuer" library="Syntese">
+<status status="NOT RUN" starttime="20220515 20:28:55.807" endtime="20220515 20:28:55.807"/>
+</kw>
+<kw name=" deposer la demande de subvention" library="Depot">
+<status status="NOT RUN" starttime="20220515 20:28:55.807" endtime="20220515 20:28:55.807"/>
+</kw>
+<status status="FAIL" starttime="20220515 20:28:47.884" endtime="20220515 20:28:55.807"/>
+</kw>
+<tag>WEB</tag>
+<status status="FAIL" starttime="20220515 20:28:44.748" endtime="20220515 20:28:55.807">Element with locator '//*[@id="$PD_pyMyCasesTree$ppxResults$l1"]//div[@data-test-id='2019100915472206281040439' and contains(text(),'MPR')]' not found.</status>
+</test>
+<doc>Test sur toutes les actions de la page de connexion pour tous les rôles.</doc>
+<status status="FAIL" starttime="20220515 20:28:44.414" endtime="20220515 20:28:55.814"/>
+</suite>
+<suite id="s1-s3" name="TS login" source="C:\Users\aassoula\OneDrive - Capgemini\Desktop\Anah\DEMO RBF\Autom\TESTS\TestSuites\TS_login.robot">
+<kw name="SuiteSetup" library="baseTest" type="SETUP">
+<kw name="Suite Setup" library="baseSocle">
+<kw name="Log To Console" library="BuiltIn">
+<arg>START SUITE</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220515 20:28:55.973" endtime="20220515 20:28:55.975"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>CURDIR=C:\\Users\\aassoula\\OneDrive - Capgemini\\Desktop\\Anah\\DEMO RBF\\Autom\\SOCLE</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220515 20:28:55.976" endtime="20220515 20:28:55.977"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>EXECDIR=${EXECDIR}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220515 20:28:55.978" endtime="20220515 20:28:55.979"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>OUTPUT DIR=${OUTPUT DIR}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220515 20:28:55.980" endtime="20220515 20:28:55.984"/>
+</kw>
+<kw name="Get Environment Variable" library="OperatingSystem">
+<var>${RBF_ENV}</var>
+<arg>RBF_ENV</arg>
+<arg>default=DEFAULT</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<msg timestamp="20220515 20:28:55.990" level="INFO">${RBF_ENV} = DEFAULT</msg>
+<status status="PASS" starttime="20220515 20:28:55.987" endtime="20220515 20:28:55.990"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${RBF_ENV}&quot; != &quot;DEFAULT&quot;">
+<kw name="Evaluate" library="BuiltIn">
+<var>${ENV}</var>
+<arg>"${RBF_ENV}"</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20220515 20:28:55.991" endtime="20220515 20:28:55.991"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${PLATFORM}</var>
+<arg>"${PIC_PLATFORM}"</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20220515 20:28:55.992" endtime="20220515 20:28:55.992"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${ENV}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20220515 20:28:55.992" endtime="20220515 20:28:55.993"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${PLATFORM}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20220515 20:28:55.993" endtime="20220515 20:28:55.993"/>
+</kw>
+<status status="NOT RUN" starttime="20220515 20:28:55.991" endtime="20220515 20:28:55.993"/>
+</branch>
+<status status="PASS" starttime="20220515 20:28:55.990" endtime="20220515 20:28:55.993"/>
+</if>
+<kw name="Log To Console" library="BuiltIn">
+<arg>ENV=${ENV}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220515 20:28:55.993" endtime="20220515 20:28:55.994"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>WEB-PLATFORM=${PLATFORM}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220515 20:28:55.994" endtime="20220515 20:28:55.995"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>WEB-SCREEN=${SCREEN}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220515 20:28:55.996" endtime="20220515 20:28:56.001"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'''${PLATFORM}''' not in '''${PLATFORMS_ALLOWED}'''</arg>
+<arg>BuiltIn.Fail</arg>
+<arg>PLATFORM_NOT_ALLOWED</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220515 20:28:56.002" endtime="20220515 20:28:56.003"/>
+</kw>
+<kw name="Get Dictionary Keys" library="Collections">
+<var>${SCREENS_ALLLOWED}</var>
+<arg>${SCREEN_SIZES_ALLOWED}</arg>
+<doc>Returns keys of the given ``dictionary`` as a list.</doc>
+<msg timestamp="20220515 20:28:56.005" level="INFO">${SCREENS_ALLLOWED} = ['DESKTOP']</msg>
+<status status="PASS" starttime="20220515 20:28:56.004" endtime="20220515 20:28:56.005"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'''${SCREEN}''' not in '''${SCREENS_ALLLOWED}'''</arg>
+<arg>BuiltIn.Fail</arg>
+<arg>SCREEN_NOT_ALLOWED</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220515 20:28:56.006" endtime="20220515 20:28:56.007"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:55.972" endtime="20220515 20:28:56.007"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:55.971" endtime="20220515 20:28:56.008"/>
+</kw>
+<test id="s1-s3-t1" name="création un dossier RG et un compte demandeur PO">
+<kw name="TestSetup" library="baseTest" type="SETUP">
+<kw name="Import Resource" library="BuiltIn">
+<arg>C:\\Users\\aassoula\\OneDrive - Capgemini\\Desktop\\Anah\\DEMO RBF\\Autom\\TESTS/Env/ENV_${ENV}.robot</arg>
+<doc>Imports a resource file with the given path.</doc>
+<status status="PASS" starttime="20220515 20:28:56.013" endtime="20220515 20:28:56.018"/>
+</kw>
+<kw name="Import Resource" library="BuiltIn">
+<arg>C:\\Users\\aassoula\\OneDrive - Capgemini\\Desktop\\Anah\\DEMO RBF\\Autom\\TESTS/Data/DATA_${ENV}.robot</arg>
+<doc>Imports a resource file with the given path.</doc>
+<status status="PASS" starttime="20220515 20:28:56.020" endtime="20220515 20:28:56.024"/>
+</kw>
+<kw name="Test Setup" library="baseSocle">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${EMPTY}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220515 20:28:56.026" endtime="20220515 20:28:56.031"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>START TEST</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220515 20:28:56.032" endtime="20220515 20:28:56.034"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${isTestWEB}</var>
+<arg>"""WEB""" in """${TEST TAGS}"""</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220515 20:28:56.036" level="INFO">${isTestWEB} = True</msg>
+<status status="PASS" starttime="20220515 20:28:56.035" endtime="20220515 20:28:56.036"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${isTestWEB}</arg>
+<arg>BuiltIn.Run Keyword</arg>
+<arg>SELENIUM.Open ${PLATFORM}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>SELENIUM.Open ${PLATFORM}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Open CHROME" library="selenium">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220515 20:28:56.079" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220515 20:28:56.040" endtime="20220515 20:28:58.775"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:56.039" endtime="20220515 20:28:58.775"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:56.038" endtime="20220515 20:28:58.776"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:56.037" endtime="20220515 20:28:58.776"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${SCREEN_SIZE}</var>
+<arg>${SCREEN_SIZES_ALLOWED}</arg>
+<arg>${SCREEN}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20220515 20:28:58.777" level="INFO">${SCREEN_SIZE} = 1260</msg>
+<status status="PASS" starttime="20220515 20:28:58.776" endtime="20220515 20:28:58.777"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${isTestWEB}</arg>
+<arg>BuiltIn.Run Keyword</arg>
+<arg>SELENIUM.Init Conf</arg>
+<arg>screen=${SCREEN_SIZE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>SELENIUM.Init Conf</arg>
+<arg>screen=${SCREEN_SIZE}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Init Conf" library="selenium">
+<arg>screen=${SCREEN_SIZE}</arg>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>${SELENIUM_TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20220515 20:28:58.778" endtime="20220515 20:28:58.792"/>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<arg>${SELENIUM_IMPLICITWAIT}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220515 20:28:58.793" endtime="20220515 20:28:58.796"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${SELENIUM_SPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220515 20:28:58.796" endtime="20220515 20:28:58.797"/>
+</kw>
+<if>
+<branch type="IF" condition="${screen} == ${0}">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20220515 20:28:58.803" endtime="20220515 20:28:58.804"/>
+</kw>
+<status status="NOT RUN" starttime="20220515 20:28:58.803" endtime="20220515 20:28:58.804"/>
+</branch>
+<branch type="ELSE">
+<kw name="Set Window Size" library="SeleniumLibrary">
+<arg>height=850</arg>
+<arg>width=${screen}</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" starttime="20220515 20:28:58.805" endtime="20220515 20:28:58.965"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:58.804" endtime="20220515 20:28:58.965"/>
+</branch>
+<status status="PASS" starttime="20220515 20:28:58.798" endtime="20220515 20:28:58.965"/>
+</if>
+<status status="PASS" starttime="20220515 20:28:58.778" endtime="20220515 20:28:58.965"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:58.778" endtime="20220515 20:28:58.966"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:58.778" endtime="20220515 20:28:58.966"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:56.024" endtime="20220515 20:28:58.966"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:56.011" endtime="20220515 20:28:58.968"/>
+</kw>
+<kw name="Given l'utilisateur est sur la page d'accueil et a lancé une demande" library="StepsCreationDossier">
+<kw name="KwLaunchCloseLogout.Kw_launch_browser">
+<arg>${site_web}[url]</arg>
+<arg>${site_web}[title]</arg>
+<msg timestamp="20220515 20:28:59.015" level="FAIL">No keyword with name 'KwLaunchCloseLogout.Kw_launch_browser' found.</msg>
+<status status="FAIL" starttime="20220515 20:28:59.006" endtime="20220515 20:28:59.015"/>
+</kw>
+<kw name="retour à l'accueil" library="Login">
+<status status="NOT RUN" starttime="20220515 20:28:59.015" endtime="20220515 20:28:59.016"/>
+</kw>
+<status status="FAIL" starttime="20220515 20:28:58.968" endtime="20220515 20:28:59.016"/>
+</kw>
+<kw name="And l'utilisateur de profil demandeur a choisit le profil PO a renseigné le numero fiscal" library="StepsCreationDossier">
+<arg>numFiscal=2008399999072</arg>
+<status status="NOT RUN" starttime="20220515 20:28:59.017" endtime="20220515 20:28:59.017"/>
+</kw>
+<kw name="And l'utilisateur de profil demandeur a renseigné ses infomations perso" library="StepsCreationDossier">
+<status status="NOT RUN" starttime="20220515 20:28:59.018" endtime="20220515 20:28:59.018"/>
+</kw>
+<kw name="When l'utilisateur saisit son email et mot de passe" library="StepsCreationDossier">
+<arg>email=val@yopmail.com</arg>
+<arg>pass=@azertY147</arg>
+<status status="NOT RUN" starttime="20220515 20:28:59.018" endtime="20220515 20:28:59.018"/>
+</kw>
+<kw name="Then l'utilisateur et redirigé à la page de confirmation" library="StepsCreationDossier">
+<status status="NOT RUN" starttime="20220515 20:28:59.018" endtime="20220515 20:28:59.018"/>
+</kw>
+<tag>WEB</tag>
+<status status="FAIL" starttime="20220515 20:28:56.008" endtime="20220515 20:28:59.018">No keyword with name 'KwLaunchCloseLogout.Kw_launch_browser' found.</status>
+</test>
+<test id="s1-s3-t2" name="activation de compte créé par un admin">
+<kw name="TestSetup" library="baseTest" type="SETUP">
+<kw name="Import Resource" library="BuiltIn">
+<arg>C:\\Users\\aassoula\\OneDrive - Capgemini\\Desktop\\Anah\\DEMO RBF\\Autom\\TESTS/Env/ENV_${ENV}.robot</arg>
+<doc>Imports a resource file with the given path.</doc>
+<status status="PASS" starttime="20220515 20:28:59.028" endtime="20220515 20:28:59.030"/>
+</kw>
+<kw name="Import Resource" library="BuiltIn">
+<arg>C:\\Users\\aassoula\\OneDrive - Capgemini\\Desktop\\Anah\\DEMO RBF\\Autom\\TESTS/Data/DATA_${ENV}.robot</arg>
+<doc>Imports a resource file with the given path.</doc>
+<status status="PASS" starttime="20220515 20:28:59.031" endtime="20220515 20:28:59.035"/>
+</kw>
+<kw name="Test Setup" library="baseSocle">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${EMPTY}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220515 20:28:59.038" endtime="20220515 20:28:59.044"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>START TEST</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220515 20:28:59.044" endtime="20220515 20:28:59.045"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${isTestWEB}</var>
+<arg>"""WEB""" in """${TEST TAGS}"""</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220515 20:28:59.058" level="INFO">${isTestWEB} = True</msg>
+<status status="PASS" starttime="20220515 20:28:59.056" endtime="20220515 20:28:59.058"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${isTestWEB}</arg>
+<arg>BuiltIn.Run Keyword</arg>
+<arg>SELENIUM.Open ${PLATFORM}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>SELENIUM.Open ${PLATFORM}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Open CHROME" library="selenium">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220515 20:28:59.065" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220515 20:28:59.065" endtime="20220515 20:29:02.341"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:59.060" endtime="20220515 20:29:02.342"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:59.060" endtime="20220515 20:29:02.342"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:59.059" endtime="20220515 20:29:02.342"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${SCREEN_SIZE}</var>
+<arg>${SCREEN_SIZES_ALLOWED}</arg>
+<arg>${SCREEN}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20220515 20:29:02.343" level="INFO">${SCREEN_SIZE} = 1260</msg>
+<status status="PASS" starttime="20220515 20:29:02.342" endtime="20220515 20:29:02.343"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${isTestWEB}</arg>
+<arg>BuiltIn.Run Keyword</arg>
+<arg>SELENIUM.Init Conf</arg>
+<arg>screen=${SCREEN_SIZE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>SELENIUM.Init Conf</arg>
+<arg>screen=${SCREEN_SIZE}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Init Conf" library="selenium">
+<arg>screen=${SCREEN_SIZE}</arg>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>${SELENIUM_TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20220515 20:29:02.347" endtime="20220515 20:29:02.362"/>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<arg>${SELENIUM_IMPLICITWAIT}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220515 20:29:02.363" endtime="20220515 20:29:02.367"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${SELENIUM_SPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220515 20:29:02.368" endtime="20220515 20:29:02.370"/>
+</kw>
+<if>
+<branch type="IF" condition="${screen} == ${0}">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20220515 20:29:02.374" endtime="20220515 20:29:02.374"/>
+</kw>
+<status status="NOT RUN" starttime="20220515 20:29:02.374" endtime="20220515 20:29:02.374"/>
+</branch>
+<branch type="ELSE">
+<kw name="Set Window Size" library="SeleniumLibrary">
+<arg>height=850</arg>
+<arg>width=${screen}</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" starttime="20220515 20:29:02.375" endtime="20220515 20:29:02.498"/>
+</kw>
+<status status="PASS" starttime="20220515 20:29:02.375" endtime="20220515 20:29:02.498"/>
+</branch>
+<status status="PASS" starttime="20220515 20:29:02.370" endtime="20220515 20:29:02.498"/>
+</if>
+<status status="PASS" starttime="20220515 20:29:02.346" endtime="20220515 20:29:02.498"/>
+</kw>
+<status status="PASS" starttime="20220515 20:29:02.345" endtime="20220515 20:29:02.498"/>
+</kw>
+<status status="PASS" starttime="20220515 20:29:02.344" endtime="20220515 20:29:02.499"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:59.035" endtime="20220515 20:29:02.499"/>
+</kw>
+<status status="PASS" starttime="20220515 20:28:59.026" endtime="20220515 20:29:02.499"/>
+</kw>
+<kw name="Given l'utilisateur renseigne les champs &quot;Email&quot; et &quot;Mot de passe&quot; de l'admin" library="StepsCreationDossier">
+<arg>aassoulaimani@anahprod</arg>
+<arg>@ziZ1994</arg>
+<kw name="KwLaunchCloseLogout.Kw_launch_browser">
+<arg>${site_web}[url]</arg>
+<arg>${site_web}[title]</arg>
+<msg timestamp="20220515 20:29:02.528" level="FAIL">No keyword with name 'KwLaunchCloseLogout.Kw_launch_browser' found.</msg>
+<status status="FAIL" starttime="20220515 20:29:02.528" endtime="20220515 20:29:02.528"/>
+</kw>
+<kw name="Login.Kw_Login">
+<arg>${email}</arg>
+<arg>${mdp}</arg>
+<status status="NOT RUN" starttime="20220515 20:29:02.546" endtime="20220515 20:29:02.547"/>
+</kw>
+<status status="FAIL" starttime="20220515 20:29:02.500" endtime="20220515 20:29:02.547"/>
+</kw>
+<kw name="When L'utilisateur active le compte" library="StepsCreationDossier">
+<status status="NOT RUN" starttime="20220515 20:29:02.548" endtime="20220515 20:29:02.548"/>
+</kw>
+<kw name="L'utilisateur peut se connecter avec son compte" library="StepsCreationDossier">
+<status status="NOT RUN" starttime="20220515 20:29:02.549" endtime="20220515 20:29:02.549"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>30s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220515 20:29:02.549" endtime="20220515 20:29:02.549"/>
+</kw>
+<tag>WEB</tag>
+<status status="FAIL" starttime="20220515 20:28:59.018" endtime="20220515 20:29:02.549">No keyword with name 'KwLaunchCloseLogout.Kw_launch_browser' found.</status>
+</test>
+<doc>Test sur toutes les actions de la page de connexion pour tous les rôles.</doc>
+<status status="FAIL" starttime="20220515 20:28:55.819" endtime="20220515 20:29:02.552"/>
+</suite>
+<status status="FAIL" starttime="20220515 20:28:37.633" endtime="20220515 20:29:02.558"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="5" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="5" skip="0">WEB</stat>
+</tag>
+<suite>
+<stat pass="0" fail="5" skip="0" id="s1" name="TestSuites">TestSuites</stat>
+<stat pass="0" fail="2" skip="0" id="s1-s1" name="PB">TestSuites.PB</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s2" name="TNR1">TestSuites.TNR1</stat>
+<stat pass="0" fail="2" skip="0" id="s1-s3" name="TS login">TestSuites.TS login</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220515 20:28:38.729" level="ERROR">Error in file 'C:\Users\aassoula\OneDrive - Capgemini\Desktop\Anah\DEMO RBF\Autom\TESTS\Web\Steps\StepsCreationDossier.robot' on line 14: Resource file '..\..\..\SOCLE\Libs\KwLaunchCloseLogout.robot' does not exist.</msg>
+<msg timestamp="20220515 20:28:38.754" level="ERROR">Error in file 'C:\Users\aassoula\OneDrive - Capgemini\Desktop\Anah\DEMO RBF\Autom\TESTS\Web\Steps\StepsCompleterDemande.robot' on line 14: Resource file '..\..\..\SOCLE\Libs\KwLaunchCloseLogout.robot' does not exist.</msg>
+<msg timestamp="20220515 20:28:44.610" level="WARN">Imported resource file 'C:\Users\aassoula\OneDrive - Capgemini\Desktop\Anah\DEMO RBF\Autom\TESTS\Web\POMs\NumFi.robot' is empty.</msg>
+<msg timestamp="20220515 20:28:55.927" level="ERROR">Error in file 'C:\Users\aassoula\OneDrive - Capgemini\Desktop\Anah\DEMO RBF\Autom\TESTS\Web\Steps\StepsCreationDossier.robot' on line 14: Resource file '..\..\..\SOCLE\Libs\KwLaunchCloseLogout.robot' does not exist.</msg>
+<msg timestamp="20220515 20:28:55.950" level="ERROR">Error in file 'C:\Users\aassoula\OneDrive - Capgemini\Desktop\Anah\DEMO RBF\Autom\TESTS\Web\Steps\StepsCompleterDemande.robot' on line 14: Resource file '..\..\..\SOCLE\Libs\KwLaunchCloseLogout.robot' does not exist.</msg>
+</errors>
+</robot>
