@@ -1,6 +1,6 @@
 tasks:
   Run all Suites:
-    shell: python -m robot --report NONE --outputdir output TESTS/TestSuites
+    shell: python -m robot --report NONE --outputdir output TESTS/Exec1
 
 condaConfigFile: conda.yaml
 artifactsDir: output
