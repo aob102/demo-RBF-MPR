@@ -5,7 +5,7 @@ Resource    ../../../SOCLE/Libs/selenium.robot
 Documentation    Contenant les éléments relatifs à la page de connexion
 
 *** Variables ***
-${loc_completerMaDemande}                  //div[@data-test-id='20190903160907043564-1']//input[@id='AmountTTCPlanFin']
+${loc_completerMaDemande}                  //a[@name="ReviewAndDownloadSection_pyWorkPage_22"]
 
 *** Keywords ***
 Completer ma demande de solde
