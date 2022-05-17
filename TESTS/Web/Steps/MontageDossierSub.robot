@@ -32,7 +32,7 @@ Montage du dossier de subvention pour un profil TMO
      Login.se connecter au compte demandeur par le portail SSO     dmo0.o475f5c56@yopmail.com    123Rules*
      MyApplications.copier le numero de dossier et acceder au dossier
      Dossier.Completer ma demande de solde
-     Mandataire.deposer une demande sans mandataire
+     #Mandataire.deposer une demande sans mandataire
      #TypeChauffage. choisir chauffage par biomasse
      Travaux.choisir travaux d'isolation
      SousTravaux.choisir travaux d'isolation intern
