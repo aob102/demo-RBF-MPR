@@ -11,10 +11,10 @@ ${loc_ventilation}                           //div[@data-test-id='20190822170814
 ${loc_audit}                                 //div[@data-test-id='201908221708140584771-4'] 
 ${loc_bonus}                                 //div[@data-test-id='201908221708140584771-5']
 ${loc_amo}                                   //div[@data-test-id='201908221708140584771-6']
-${loc_continuer}                             //button[@name='pyCaseActionAreaButtons_pyWorkPage_24']
+${loc_continuer_1}                             //button[@name='pyCaseActionAreaButtons_pyWorkPage_24']
 *** Keywords ***
 choisir travaux d'isolation 
 
   Click If Element Is Enabled                  ${loc_isolation}
-  Click If Element Is Enabled                  ${loc_continuer}   
+  Click If Element Is Enabled                  ${loc_continuer_1}   
 

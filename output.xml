@@ -1,0 +1,957 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.1 (Python 3.9.2 on win32)" generated="20220517 20:44:29.702" rpa="false" schemaversion="2">
+<suite id="s1" name="TNR1" source="c:\Users\aassoula\OneDrive - Capgemini\Desktop\Anah\DEMO RBF\Autom\TESTS\Exec1\TNR1.robot">
+<kw name="SuiteSetup" library="baseTest" type="SETUP">
+<kw name="Suite Setup" library="baseSocle">
+<kw name="Log To Console" library="BuiltIn">
+<arg>START SUITE</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220517 20:44:31.024" endtime="20220517 20:44:31.025"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>CURDIR=c:\\Users\\aassoula\\OneDrive - Capgemini\\Desktop\\Anah\\DEMO RBF\\Autom\\SOCLE</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220517 20:44:31.025" endtime="20220517 20:44:31.026"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>EXECDIR=${EXECDIR}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220517 20:44:31.027" endtime="20220517 20:44:31.028"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>OUTPUT DIR=${OUTPUT DIR}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220517 20:44:31.029" endtime="20220517 20:44:31.030"/>
+</kw>
+<kw name="Get Environment Variable" library="OperatingSystem">
+<var>${RBF_ENV}</var>
+<arg>RBF_ENV</arg>
+<arg>default=DEFAULT</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<msg timestamp="20220517 20:44:31.031" level="INFO">${RBF_ENV} = DEFAULT</msg>
+<status status="PASS" starttime="20220517 20:44:31.030" endtime="20220517 20:44:31.031"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${RBF_ENV}&quot; != &quot;DEFAULT&quot;">
+<kw name="Evaluate" library="BuiltIn">
+<var>${ENV}</var>
+<arg>"${RBF_ENV}"</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20220517 20:44:31.032" endtime="20220517 20:44:31.032"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${PLATFORM}</var>
+<arg>"${PIC_PLATFORM}"</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20220517 20:44:31.032" endtime="20220517 20:44:31.032"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${ENV}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20220517 20:44:31.032" endtime="20220517 20:44:31.032"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${PLATFORM}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20220517 20:44:31.032" endtime="20220517 20:44:31.032"/>
+</kw>
+<status status="NOT RUN" starttime="20220517 20:44:31.031" endtime="20220517 20:44:31.032"/>
+</branch>
+<status status="PASS" starttime="20220517 20:44:31.031" endtime="20220517 20:44:31.032"/>
+</if>
+<kw name="Log To Console" library="BuiltIn">
+<arg>ENV=${ENV}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220517 20:44:31.032" endtime="20220517 20:44:31.032"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>WEB-PLATFORM=${PLATFORM}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220517 20:44:31.036" endtime="20220517 20:44:31.037"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>WEB-SCREEN=${SCREEN}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220517 20:44:31.038" endtime="20220517 20:44:31.040"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'''${PLATFORM}''' not in '''${PLATFORMS_ALLOWED}'''</arg>
+<arg>BuiltIn.Fail</arg>
+<arg>PLATFORM_NOT_ALLOWED</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220517 20:44:31.041" endtime="20220517 20:44:31.042"/>
+</kw>
+<kw name="Get Dictionary Keys" library="Collections">
+<var>${SCREENS_ALLLOWED}</var>
+<arg>${SCREEN_SIZES_ALLOWED}</arg>
+<doc>Returns keys of the given ``dictionary`` as a list.</doc>
+<msg timestamp="20220517 20:44:31.042" level="INFO">${SCREENS_ALLLOWED} = ['DESKTOP']</msg>
+<status status="PASS" starttime="20220517 20:44:31.042" endtime="20220517 20:44:31.042"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'''${SCREEN}''' not in '''${SCREENS_ALLLOWED}'''</arg>
+<arg>BuiltIn.Fail</arg>
+<arg>SCREEN_NOT_ALLOWED</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220517 20:44:31.042" endtime="20220517 20:44:31.042"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:31.024" endtime="20220517 20:44:31.042"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:31.023" endtime="20220517 20:44:31.078"/>
+</kw>
+<test id="s1-t1" name="TNR 1">
+<kw name="TestSetup" library="baseTest" type="SETUP">
+<kw name="Import Resource" library="BuiltIn">
+<arg>c:\\Users\\aassoula\\OneDrive - Capgemini\\Desktop\\Anah\\DEMO RBF\\Autom\\TESTS/Env/ENV_${ENV}.robot</arg>
+<doc>Imports a resource file with the given path.</doc>
+<status status="PASS" starttime="20220517 20:44:31.084" endtime="20220517 20:44:31.084"/>
+</kw>
+<kw name="Import Resource" library="BuiltIn">
+<arg>c:\\Users\\aassoula\\OneDrive - Capgemini\\Desktop\\Anah\\DEMO RBF\\Autom\\TESTS/Data/DATA_${ENV}.robot</arg>
+<doc>Imports a resource file with the given path.</doc>
+<status status="PASS" starttime="20220517 20:44:31.084" endtime="20220517 20:44:31.094"/>
+</kw>
+<kw name="Test Setup" library="baseSocle">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${EMPTY}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220517 20:44:31.094" endtime="20220517 20:44:31.111"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>START TEST</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220517 20:44:31.112" endtime="20220517 20:44:31.113"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${isTestWEB}</var>
+<arg>"""WEB""" in """${TEST TAGS}"""</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220517 20:44:31.115" level="INFO">${isTestWEB} = True</msg>
+<status status="PASS" starttime="20220517 20:44:31.114" endtime="20220517 20:44:31.115"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${isTestWEB}</arg>
+<arg>BuiltIn.Run Keyword</arg>
+<arg>SELENIUM.Open ${PLATFORM}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>SELENIUM.Open ${PLATFORM}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Open CHROME" library="selenium">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220517 20:44:31.118" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220517 20:44:31.117" endtime="20220517 20:44:33.982"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:31.117" endtime="20220517 20:44:33.982"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:31.116" endtime="20220517 20:44:33.982"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:31.115" endtime="20220517 20:44:33.983"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${SCREEN_SIZE}</var>
+<arg>${SCREEN_SIZES_ALLOWED}</arg>
+<arg>${SCREEN}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20220517 20:44:33.983" level="INFO">${SCREEN_SIZE} = 1260</msg>
+<status status="PASS" starttime="20220517 20:44:33.983" endtime="20220517 20:44:33.984"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${isTestWEB}</arg>
+<arg>BuiltIn.Run Keyword</arg>
+<arg>SELENIUM.Init Conf</arg>
+<arg>screen=${SCREEN_SIZE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>SELENIUM.Init Conf</arg>
+<arg>screen=${SCREEN_SIZE}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Init Conf" library="selenium">
+<arg>screen=${SCREEN_SIZE}</arg>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>${SELENIUM_TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20220517 20:44:33.987" endtime="20220517 20:44:33.992"/>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<arg>${SELENIUM_IMPLICITWAIT}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220517 20:44:33.993" endtime="20220517 20:44:33.997"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${SELENIUM_SPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220517 20:44:33.997" endtime="20220517 20:44:33.998"/>
+</kw>
+<if>
+<branch type="IF" condition="${screen} == ${0}">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20220517 20:44:34.001" endtime="20220517 20:44:34.001"/>
+</kw>
+<status status="NOT RUN" starttime="20220517 20:44:34.001" endtime="20220517 20:44:34.001"/>
+</branch>
+<branch type="ELSE">
+<kw name="Set Window Size" library="SeleniumLibrary">
+<arg>height=850</arg>
+<arg>width=${screen}</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" starttime="20220517 20:44:34.002" endtime="20220517 20:44:34.144"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:34.001" endtime="20220517 20:44:34.144"/>
+</branch>
+<status status="PASS" starttime="20220517 20:44:33.998" endtime="20220517 20:44:34.144"/>
+</if>
+<status status="PASS" starttime="20220517 20:44:33.986" endtime="20220517 20:44:34.144"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:33.986" endtime="20220517 20:44:34.144"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:33.984" endtime="20220517 20:44:34.144"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:31.094" endtime="20220517 20:44:34.145"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:31.083" endtime="20220517 20:44:34.145"/>
+</kw>
+<kw name="Montage du dossier de subvention pour un profil TMO" library="MontageDossierSub">
+<doc>L'utilisateur accède à la page de connexion</doc>
+<kw name="lancer le navigateur et l'environnement" library="PreparationEnv">
+<arg>${site_web}[url]</arg>
+<arg>${site_web}[title]</arg>
+<doc>Lancement de l'application dans un navigateur
+${URL} Url de l'application à lancer
+${browser} Navigateur à utiliser
+${exceptedTitle} Titre de la page attendue</doc>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220517 20:44:34.176" level="INFO">Opening url 'https://auth-preprod.anah.fr/saml/singleSignOn'</msg>
+<status status="PASS" starttime="20220517 20:44:34.176" endtime="20220517 20:44:34.990"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220517 20:44:34.991" endtime="20220517 20:44:35.157"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${currentTitle}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20220517 20:44:35.167" level="INFO">${currentTitle} = Portail d'authentification</msg>
+<status status="PASS" starttime="20220517 20:44:35.157" endtime="20220517 20:44:35.167"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${exceptedTitle}</arg>
+<arg>${currentTitle}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220517 20:44:35.167" endtime="20220517 20:44:35.168"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:34.175" endtime="20220517 20:44:35.169"/>
+</kw>
+<kw name="se connecter au compte demandeur par le portail SSO" library="Login">
+<arg>sophiec79e1102@yopmail.com</arg>
+<arg>123Rules*</arg>
+<doc>Connexion à l'application
+${input_userName} Username de l'utilisateur
+${input_pwd} Mot de passe de l'utilisateur</doc>
+<kw name="Kw_load_login_page" library="Login">
+<doc>Vérifie que les éléments de la pages de connexion sont bien présents</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${loc_email}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220517 20:44:35.189" endtime="20220517 20:44:35.239"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${loc_mdp}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220517 20:44:35.239" endtime="20220517 20:44:35.279"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:35.188" endtime="20220517 20:44:35.279"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${loc_email}</arg>
+<arg>${input_userName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220517 20:44:35.280" level="INFO">Typing text 'sophiec79e1102@yopmail.com' into text field '//input[@id="userfield"]'.</msg>
+<status status="PASS" starttime="20220517 20:44:35.279" endtime="20220517 20:44:35.430"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${loc_mdp}</arg>
+<arg>${input_pwd}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220517 20:44:35.431" level="INFO">Typing password into text field '//input[@id="passwordfield"]'.</msg>
+<msg timestamp="20220517 20:44:35.493" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220517 20:44:35.592" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220517 20:44:35.431" endtime="20220517 20:44:35.592"/>
+</kw>
+<kw name="Click If Element Is Enabled" library="selenium">
+<arg>${loc_valider}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10</arg>
+<arg>1s</arg>
+<arg>Scroll Element Into View</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220517 20:44:35.597" endtime="20220517 20:44:35.906"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:35.596" endtime="20220517 20:44:35.907"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220517 20:44:35.908" endtime="20220517 20:44:35.965"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10</arg>
+<arg>1s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220517 20:44:35.965" level="INFO">Clicking element '//button[@type="submit"]/span'.</msg>
+<status status="PASS" starttime="20220517 20:44:35.965" endtime="20220517 20:44:36.826"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:35.965" endtime="20220517 20:44:36.826"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:35.592" endtime="20220517 20:44:36.827"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:35.186" endtime="20220517 20:44:36.827"/>
+</kw>
+<kw name="copier le numero de dossier et acceder au dossier" library="MyApplications">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${NumDossier}</var>
+<arg>${loc-NumDossier}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220517 20:44:38.755" level="INFO">${NumDossier} = MPR-2021-1039939</msg>
+<status status="PASS" starttime="20220517 20:44:36.829" endtime="20220517 20:44:38.755"/>
+</kw>
+<kw name="Click If Element Is Enabled" library="selenium">
+<arg>${VoirDossier}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10</arg>
+<arg>1s</arg>
+<arg>Scroll Element Into View</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220517 20:44:38.758" endtime="20220517 20:44:39.067"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:38.757" endtime="20220517 20:44:39.067"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220517 20:44:39.067" endtime="20220517 20:44:39.156"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10</arg>
+<arg>1s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220517 20:44:39.162" level="INFO">Clicking element '//li[@id='$PD_pyMyCasesTree$ppxResults$l1']//button[@data-test-id='20191011113919010615759']'.</msg>
+<status status="PASS" starttime="20220517 20:44:39.160" endtime="20220517 20:44:39.289"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:39.157" endtime="20220517 20:44:39.289"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:38.755" endtime="20220517 20:44:39.289"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:36.828" endtime="20220517 20:44:39.289"/>
+</kw>
+<kw name="Completer ma demande de solde" library="Dossier">
+<kw name="Click If Element Is Enabled" library="selenium">
+<arg>${loc_completerMaDemande}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10</arg>
+<arg>1s</arg>
+<arg>Scroll Element Into View</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220517 20:44:39.295" endtime="20220517 20:44:39.930"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:39.294" endtime="20220517 20:44:39.930"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220517 20:44:39.930" endtime="20220517 20:44:40.005"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10</arg>
+<arg>1s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220517 20:44:40.006" level="INFO">Clicking element '//a[@name="ReviewAndDownloadSection_pyWorkPage_22"]'.</msg>
+<status status="PASS" starttime="20220517 20:44:40.006" endtime="20220517 20:44:40.126"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:40.006" endtime="20220517 20:44:40.126"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:39.289" endtime="20220517 20:44:40.126"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:39.289" endtime="20220517 20:44:40.126"/>
+</kw>
+<kw name="choisir travaux d'isolation" library="Travaux">
+<kw name="Click If Element Is Enabled" library="selenium">
+<arg>${loc_isolation}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10</arg>
+<arg>1s</arg>
+<arg>Scroll Element Into View</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220517 20:44:40.126" endtime="20220517 20:44:41.264"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:40.126" endtime="20220517 20:44:41.264"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220517 20:44:41.264" endtime="20220517 20:44:41.367"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10</arg>
+<arg>1s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220517 20:44:41.374" level="INFO">Clicking element '//div[@data-test-id='201908221708140584771-2']'.</msg>
+<status status="PASS" starttime="20220517 20:44:41.372" endtime="20220517 20:44:41.547"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:41.368" endtime="20220517 20:44:41.547"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:40.126" endtime="20220517 20:44:41.548"/>
+</kw>
+<kw name="Click If Element Is Enabled" library="selenium">
+<arg>${loc_continuer_1}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10</arg>
+<arg>1s</arg>
+<arg>Scroll Element Into View</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220517 20:44:41.548" endtime="20220517 20:44:41.865"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:41.548" endtime="20220517 20:44:41.866"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220517 20:44:41.868" endtime="20220517 20:44:41.933"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10</arg>
+<arg>1s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220517 20:44:41.934" level="INFO">Clicking element '//button[@name='pyCaseActionAreaButtons_pyWorkPage_24']'.</msg>
+<status status="PASS" starttime="20220517 20:44:41.934" endtime="20220517 20:44:42.112"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:41.933" endtime="20220517 20:44:42.112"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:41.548" endtime="20220517 20:44:42.112"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:40.126" endtime="20220517 20:44:42.112"/>
+</kw>
+<kw name="choisir travaux d'isolation intern" library="SousTravaux">
+<kw name="Click If Element Is Enabled" library="selenium">
+<arg>${loc_IsoInter}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10</arg>
+<arg>1s</arg>
+<arg>Scroll Element Into View</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220517 20:44:42.112" endtime="20220517 20:44:43.182"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:42.112" endtime="20220517 20:44:43.182"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220517 20:44:43.182" endtime="20220517 20:44:43.225"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10</arg>
+<arg>1s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220517 20:44:43.226" level="INFO">Clicking element '//div[@data-test-id='201908281104520483187846' and text()='Isolation des murs par l’intérieur']'.</msg>
+<status status="PASS" starttime="20220517 20:44:43.226" endtime="20220517 20:44:43.319"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:43.226" endtime="20220517 20:44:43.319"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:42.112" endtime="20220517 20:44:43.320"/>
+</kw>
+<kw name="Click If Element Is Enabled" library="selenium">
+<arg>${loc_continuer_2}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10</arg>
+<arg>1s</arg>
+<arg>Scroll Element Into View</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220517 20:44:43.323" endtime="20220517 20:44:43.654"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:43.322" endtime="20220517 20:44:43.655"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220517 20:44:43.656" endtime="20220517 20:44:43.725"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10</arg>
+<arg>1s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220517 20:44:43.727" level="INFO">Clicking element '//*[@name='pyCaseActionAreaButtons_pyWorkPage_31']'.</msg>
+<status status="PASS" starttime="20220517 20:44:43.726" endtime="20220517 20:44:43.826"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:43.726" endtime="20220517 20:44:43.828"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:43.320" endtime="20220517 20:44:43.828"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:42.112" endtime="20220517 20:44:43.828"/>
+</kw>
+<kw name="renseingner les informations travaux d'isolation interieur" library="InfoTravaux">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${loc_surface}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220517 20:44:43.829" endtime="20220517 20:44:44.407"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${loc_surface}</arg>
+<arg>70</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220517 20:44:44.408" level="INFO">Typing text '70' into text field '//*[@id='c2ffa2bc']'.</msg>
+<status status="PASS" starttime="20220517 20:44:44.408" endtime="20220517 20:44:44.580"/>
+</kw>
+<kw name="Click If Element Is Enabled" library="selenium">
+<arg>${loc_resistance}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10</arg>
+<arg>1s</arg>
+<arg>Scroll Element Into View</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220517 20:44:44.580" endtime="20220517 20:44:44.894"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:44.580" endtime="20220517 20:44:44.894"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220517 20:44:44.894" endtime="20220517 20:44:44.984"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10</arg>
+<arg>1s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220517 20:44:44.990" level="INFO">Clicking element '//*[@id='4c70a55f']'.</msg>
+<status status="PASS" starttime="20220517 20:44:44.990" endtime="20220517 20:44:45.100"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:44.988" endtime="20220517 20:44:45.100"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:44.580" endtime="20220517 20:44:45.101"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10</arg>
+<arg>1s</arg>
+<arg>Input Text</arg>
+<arg>${loc_resistance}</arg>
+<arg>5</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${loc_resistance}</arg>
+<arg>5</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220517 20:44:45.102" level="INFO">Typing text '5' into text field '//*[@id='4c70a55f']'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220517 20:44:45.485" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-94.png"&gt;&lt;img src="selenium-screenshot-94.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220517 20:44:45.216" endtime="20220517 20:44:45.485"/>
+</kw>
+<msg timestamp="20220517 20:44:45.496" level="FAIL">StaleElementReferenceException: Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=101.0.4951.67)
+</msg>
+<status status="FAIL" starttime="20220517 20:44:45.102" endtime="20220517 20:44:45.496"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${loc_resistance}</arg>
+<arg>5</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220517 20:44:46.510" level="INFO">Typing text '5' into text field '//*[@id='4c70a55f']'.</msg>
+<status status="PASS" starttime="20220517 20:44:46.507" endtime="20220517 20:44:46.743"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:45.101" endtime="20220517 20:44:46.744"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10</arg>
+<arg>1s</arg>
+<arg>Input Text</arg>
+<arg>${loc_resistance}</arg>
+<arg>5</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${loc_resistance}</arg>
+<arg>5</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220517 20:44:46.744" level="INFO">Typing text '5' into text field '//*[@id='4c70a55f']'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220517 20:44:47.304" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-95.png"&gt;&lt;img src="selenium-screenshot-95.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220517 20:44:47.008" endtime="20220517 20:44:47.304"/>
+</kw>
+<msg timestamp="20220517 20:44:47.307" level="FAIL">StaleElementReferenceException: Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=101.0.4951.67)
+</msg>
+<status status="FAIL" starttime="20220517 20:44:46.744" endtime="20220517 20:44:47.308"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${loc_resistance}</arg>
+<arg>5</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220517 20:44:48.324" level="INFO">Typing text '5' into text field '//*[@id='4c70a55f']'.</msg>
+<status status="PASS" starttime="20220517 20:44:48.321" endtime="20220517 20:44:48.476"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:46.744" endtime="20220517 20:44:48.476"/>
+</kw>
+<kw name="Click If Element Is Enabled" library="selenium">
+<arg>${loc_continuer_3}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10</arg>
+<arg>1s</arg>
+<arg>Scroll Element Into View</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220517 20:44:48.478" endtime="20220517 20:44:48.806"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:48.478" endtime="20220517 20:44:48.807"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220517 20:44:48.807" endtime="20220517 20:44:48.926"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10</arg>
+<arg>1s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220517 20:44:48.929" level="INFO">Clicking element '//*[@name='pyCaseActionAreaButtons_pyWorkPage_23']'.</msg>
+<status status="PASS" starttime="20220517 20:44:48.928" endtime="20220517 20:44:49.096"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:48.927" endtime="20220517 20:44:49.096"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:48.476" endtime="20220517 20:44:49.097"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:43.829" endtime="20220517 20:44:49.097"/>
+</kw>
+<kw name="renseingner les informations travaux d'isolation interieur" library="Siret">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${loc_Siret_1}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220517 20:44:49.100" endtime="20220517 20:44:50.067"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${loc_Siret_1}</arg>
+<arg>85278399200013</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220517 20:44:50.068" level="INFO">Typing text '85278399200013' into text field '//*[@data-test-id='201908301228310488248-1']//*[@name="$PpyWorkPage$pWorkProject$l1$pWorkCompany$pSiret"]'.</msg>
+<status status="PASS" starttime="20220517 20:44:50.068" endtime="20220517 20:44:50.266"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${loc_Date_1}</arg>
+<arg>02/07/2021</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220517 20:44:50.268" level="INFO">Typing text '02/07/2021' into text field '//*[@data-test-id='201908301228310488248-1']//input[@data-test-id='201908301447250997212737']'.</msg>
+<status status="PASS" starttime="20220517 20:44:50.267" endtime="20220517 20:44:50.496"/>
+</kw>
+<kw name="Click If Element Is Enabled" library="selenium">
+<arg>${loc_continuer}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10</arg>
+<arg>1s</arg>
+<arg>Scroll Element Into View</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220517 20:44:50.498" endtime="20220517 20:44:50.807"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:50.497" endtime="20220517 20:44:50.807"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220517 20:44:50.808" endtime="20220517 20:44:50.846"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10</arg>
+<arg>1s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220517 20:44:50.847" level="INFO">Clicking element '//button[@name='pyCaseActionAreaButtons_pyWorkPage_23']'.</msg>
+<status status="PASS" starttime="20220517 20:44:50.847" endtime="20220517 20:44:50.954"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:50.847" endtime="20220517 20:44:50.954"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:50.496" endtime="20220517 20:44:50.955"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:49.098" endtime="20220517 20:44:50.956"/>
+</kw>
+<kw name="televerser le premier devis" library="Devis">
+<kw name="Click If Element Is Enabled" library="selenium">
+<arg>${loc_AjouterDevis1}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10</arg>
+<arg>1s</arg>
+<arg>Scroll Element Into View</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220517 20:44:50.961" endtime="20220517 20:44:52.047"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:50.961" endtime="20220517 20:44:52.047"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220517 20:44:52.047" endtime="20220517 20:44:52.092"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10</arg>
+<arg>1s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220517 20:44:52.093" level="INFO">Clicking element '//*[@data-test-id='201908301228310488248-1']//*[@data-test-id='20191113161049015815678']'.</msg>
+<status status="PASS" starttime="20220517 20:44:52.093" endtime="20220517 20:44:52.179"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:52.092" endtime="20220517 20:44:52.179"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:50.960" endtime="20220517 20:44:52.179"/>
+</kw>
+<kw name="Click If Element Is Enabled" library="selenium">
+<arg>${loc_Televerser}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10</arg>
+<arg>1s</arg>
+<arg>Scroll Element Into View</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220517 20:44:52.181" endtime="20220517 20:44:52.573"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:52.181" endtime="20220517 20:44:52.573"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220517 20:44:52.574" endtime="20220517 20:44:52.607"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10</arg>
+<arg>1s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220517 20:44:52.608" level="INFO">Clicking element '//*[@data-test-id='201908301228310488248-1']//button[@data-test-id='2019090511254205737677']'.</msg>
+<status status="PASS" starttime="20220517 20:44:52.608" endtime="20220517 20:44:52.692"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:52.608" endtime="20220517 20:44:52.693"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:52.180" endtime="20220517 20:44:52.693"/>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<arg>${loc_Fichier}</arg>
+<arg>${EXECDIR}\\devis.png</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20220517 20:44:52.694" level="INFO">Sending C:\Users\aassoula\OneDrive - Capgemini\Desktop\Anah\DEMO RBF\Autom\devis.png to browser.</msg>
+<status status="PASS" starttime="20220517 20:44:52.693" endtime="20220517 20:44:52.981"/>
+</kw>
+<kw name="Click If Element Is Enabled" library="selenium">
+<arg>${loc_soumettre}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10</arg>
+<arg>1s</arg>
+<arg>Scroll Element Into View</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220517 20:44:52.986" endtime="20220517 20:44:53.319"/>
+</kw>
+<status status="PASS" starttime="20220517 20:44:52.985" endtime="20220517 20:44:53.321"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220517 20:44:53.324" endtime="20220517 20:44:53.383"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10</arg>
+<arg>1s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220517 20:44:53.390" level="INFO">Clicking element '//button[@id='ModalButtonSubmit']'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220517 20:44:54.837" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-96.png"&gt;&lt;img src="selenium-screenshot-96.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220517 20:44:54.523" endtime="20220517 20:44:54.839"/>
+</kw>
+<msg timestamp="20220517 20:44:54.846" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button class="buttonTdButton" pega_version="HTMLPROPERTY" id="ModalButtonSubmit" onclick="if(typeof(pega) !='undefined' &amp;amp;&amp;amp; pega.u.d) setUserStart(); doModalAction(pega.u.d.submitModalDlgParam,event); " type="button" data-ctl="non-auto"&gt;...&lt;/button&gt; is not clickable at point (757, 537). Other element would receive the click: &lt;div section_index="1" class="layout-body clearfix  "&gt;...&lt;/div&gt;
+  (Session info: chrome=101.0.4951.67)
+</msg>
+<status status="FAIL" starttime="20220517 20:44:53.387" endtime="20220517 20:44:54.846"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220517 20:44:55.862" level="INFO">Clicking element '//button[@id='ModalButtonSubmit']'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220517 20:45:20.253" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=101.0.4951.67)
+</msg>
+<status status="FAIL" starttime="20220517 20:45:08.056" endtime="20220517 20:45:20.253"/>
+</kw>
+<msg timestamp="20220517 20:45:20.253" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=101.0.4951.67)
+</msg>
+<msg timestamp="20220517 20:45:20.260" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=101.0.4951.67)
+</msg>
+<status status="FAIL" starttime="20220517 20:44:55.861" endtime="20220517 20:45:20.261"/>
+</kw>
+<msg timestamp="20220517 20:45:20.261" level="FAIL">Keyword 'Click Element' failed after retrying for 10 seconds. The last error was: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=101.0.4951.67)
+</msg>
+<status status="FAIL" starttime="20220517 20:44:53.384" endtime="20220517 20:45:20.261"/>
+</kw>
+<status status="FAIL" starttime="20220517 20:44:52.982" endtime="20220517 20:45:20.262"/>
+</kw>
+<kw name="Click If Element Is Enabled" library="selenium">
+<arg>${loc_continuer}</arg>
+<status status="NOT RUN" starttime="20220517 20:45:20.263" endtime="20220517 20:45:20.263"/>
+</kw>
+<status status="FAIL" starttime="20220517 20:44:50.957" endtime="20220517 20:45:20.263"/>
+</kw>
+<kw name="renseingner le montant du premier travaux" library="Somme">
+<status status="NOT RUN" starttime="20220517 20:45:20.265" endtime="20220517 20:45:20.265"/>
+</kw>
+<kw name=" choisir non pour les aides" library="Cee">
+<status status="NOT RUN" starttime="20220517 20:45:20.266" endtime="20220517 20:45:20.266"/>
+</kw>
+<kw name=" verifier la syntèse et Continuer" library="Syntese">
+<status status="NOT RUN" starttime="20220517 20:45:20.267" endtime="20220517 20:45:20.267"/>
+</kw>
+<kw name=" deposer la demande de subvention" library="Depot">
+<status status="NOT RUN" starttime="20220517 20:45:20.267" endtime="20220517 20:45:20.267"/>
+</kw>
+<status status="FAIL" starttime="20220517 20:44:34.145" endtime="20220517 20:45:20.267"/>
+</kw>
+<tag>WEB</tag>
+<status status="FAIL" starttime="20220517 20:44:31.078" endtime="20220517 20:45:20.269">Keyword 'Click Element' failed after retrying for 10 seconds. The last error was: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=101.0.4951.67)
+</status>
+</test>
+<doc>Test sur toutes les actions de la page de connexion pour tous les rôles.</doc>
+<status status="FAIL" starttime="20220517 20:44:29.708" endtime="20220517 20:45:20.277"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">WEB</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="TNR1">TNR1</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220517 20:44:30.916" level="WARN">Imported resource file 'c:\Users\aassoula\OneDrive - Capgemini\Desktop\Anah\DEMO RBF\Autom\TESTS\Web\POMs\NumFi.robot' is empty.</msg>
+<msg timestamp="20220517 20:45:20.253" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=101.0.4951.67)
+</msg>
+</errors>
+</robot>

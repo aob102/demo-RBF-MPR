@@ -4,9 +4,9 @@ Resource    ../Data/Comptes.robot
 Resource    ../Web/Steps/MontageDossierSub.robot
 Resource    ../baseTest.robot
 Test Setup    baseTest.TestSetup
-Test Teardown    baseTest.TestTeardown
+#Test Teardown    baseTest.TestTeardown
 Suite Setup    baseTest.SuiteSetup
-Suite Teardown    baseTest.SuiteTeardown
+#Suite Teardown    baseTest.SuiteTeardown
 
 Documentation    Test sur toutes les actions de la page de connexion pour tous les rôles.
 ####################

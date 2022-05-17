@@ -14,8 +14,8 @@ ${loc_continuer}                  //button[@name='pyCaseActionAreaButtons_pyWork
 televerser le premier devis
 
   Click If Element Is Enabled                  ${loc_AjouterDevis1} 
-  Click Element                                ${loc_Televerser}
-  Choose File                                  ${loc_Fichier}              devis.png 
-  Click Element                                ${loc_soumettre}
+  Click If Element Is Enabled                  ${loc_Televerser}
+  Choose File                                  ${loc_Fichier}              ${EXECDIR}\\devis.png
+  Click If Element Is Enabled                  ${loc_soumettre}
   Click If Element Is Enabled                  ${loc_continuer}
 
