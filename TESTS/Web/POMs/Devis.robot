@@ -15,7 +15,7 @@ televerser le premier devis
 
   Click If Element Is Enabled                  ${loc_AjouterDevis1} 
   Click Element                                ${loc_Televerser}
-  Choose File                                  ${loc_Fichier}              devis.pdf 
+  Choose File                                  ${loc_Fichier}              devis.png 
   Click Element                                ${loc_soumettre}
   Click If Element Is Enabled                  ${loc_continuer}
 
