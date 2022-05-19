@@ -33,7 +33,7 @@ Montage du dossier
      MyApplications.copier le numero de dossier et acceder au dossier
      Dossier.Completer ma demande de solde
      #Mandataire.deposer une demande sans mandataire
-     TypeChauffage. choisir chauffage par biomasse
+     #TypeChauffage. choisir chauffage par biomasse
      Travaux.choisir travaux d'isolation
      SousTravaux.choisir travaux d'isolation intern
      InfoTravaux.renseingner les informations travaux d'isolation interieur
