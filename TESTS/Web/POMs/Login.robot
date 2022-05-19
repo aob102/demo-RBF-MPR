@@ -27,7 +27,8 @@ se connecter au compte demandeur par le portail SSO
     SeleniumLibrary.Input Text    ${loc_email}    ${input_userName}    
     SeleniumLibrary.Input Password    ${loc_mdp}    ${input_pwd}
     Click If Element Is Enabled    ${loc_valider}
-
+    Run Keyword And Ignore Error      Wait Until Keyword Succeeds    1s    10s    SeleniumLibrary.Input Text    ${loc_valider}   ${input_userName}  
+      
 
 
 

@@ -26,7 +26,7 @@ Resource    ../../../SOCLE/Libs/PreparationEnv.robot
 #Resource    ../Web/Steps/StepsConnexion.robot
 *** Keywords ***
 
-Montage du dossier de subvention pour un profil TMO
+Montage du dossier 
      [Documentation]    L'utilisateur accède à la page de connexion   
      PreparationEnv.lancer le navigateur et l'environnement  ${site_web}[url]     ${site_web}[title]
      Login.se connecter au compte demandeur par le portail SSO     sophiec79e1102@yopmail.com    123Rules*

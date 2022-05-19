@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.1 (Python 3.9.2 on win32)" generated="20220517 21:37:09.031" rpa="false" schemaversion="2">
+<suite id="s1" name="TNR1" source="c:\Users\aassoula\OneDrive - Capgemini\Desktop\Anah\DEMO RBF\Autom\TESTS\Exec1\TNR1.robot">
+<kw name="SuiteSetup" library="baseTest" type="SETUP">
+<kw name="Suite Setup" library="baseSocle">
+<kw name="Log To Console" library="BuiltIn">
+<arg>START SUITE</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220517 21:37:10.509" endtime="20220517 21:37:10.511"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>CURDIR=c:\\Users\\aassoula\\OneDrive - Capgemini\\Desktop\\Anah\\DEMO RBF\\Autom\\SOCLE</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220517 21:37:10.511" endtime="20220517 21:37:10.513"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>EXECDIR=${EXECDIR}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220517 21:37:10.513" endtime="20220517 21:37:10.516"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>OUTPUT DIR=${OUTPUT DIR}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220517 21:37:10.516" endtime="20220517 21:37:10.518"/>
+</kw>
+<kw name="Get Environment Variable" library="OperatingSystem">
+<var>${RBF_ENV}</var>
+<arg>RBF_ENV</arg>
+<arg>default=DEFAULT</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<msg timestamp="20220517 21:37:10.520" level="INFO">${RBF_ENV} = DEFAULT</msg>
+<status status="PASS" starttime="20220517 21:37:10.519" endtime="20220517 21:37:10.520"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${RBF_ENV}&quot; != &quot;DEFAULT&quot;">
+<kw name="Evaluate" library="BuiltIn">
+<var>${ENV}</var>
+<arg>"${RBF_ENV}"</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20220517 21:37:10.522" endtime="20220517 21:37:10.522"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${PLATFORM}</var>
+<arg>"${PIC_PLATFORM}"</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20220517 21:37:10.523" endtime="20220517 21:37:10.523"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${ENV}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20220517 21:37:10.524" endtime="20220517 21:37:10.524"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${PLATFORM}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20220517 21:37:10.524" endtime="20220517 21:37:10.524"/>
+</kw>
+<status status="NOT RUN" starttime="20220517 21:37:10.521" endtime="20220517 21:37:10.524"/>
+</branch>
+<status status="PASS" starttime="20220517 21:37:10.520" endtime="20220517 21:37:10.524"/>
+</if>
+<kw name="Log To Console" library="BuiltIn">
+<arg>ENV=${ENV}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220517 21:37:10.524" endtime="20220517 21:37:10.528"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>WEB-PLATFORM=${PLATFORM}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220517 21:37:10.528" endtime="20220517 21:37:10.530"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>WEB-SCREEN=${SCREEN}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220517 21:37:10.530" endtime="20220517 21:37:10.531"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'''${PLATFORM}''' not in '''${PLATFORMS_ALLOWED}'''</arg>
+<arg>BuiltIn.Fail</arg>
+<arg>PLATFORM_NOT_ALLOWED</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220517 21:37:10.532" endtime="20220517 21:37:10.533"/>
+</kw>
+<kw name="Get Dictionary Keys" library="Collections">
+<var>${SCREENS_ALLLOWED}</var>
+<arg>${SCREEN_SIZES_ALLOWED}</arg>
+<doc>Returns keys of the given ``dictionary`` as a list.</doc>
+<msg timestamp="20220517 21:37:10.534" level="INFO">${SCREENS_ALLLOWED} = ['DESKTOP']</msg>
+<status status="PASS" starttime="20220517 21:37:10.534" endtime="20220517 21:37:10.534"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'''${SCREEN}''' not in '''${SCREENS_ALLLOWED}'''</arg>
+<arg>BuiltIn.Fail</arg>
+<arg>SCREEN_NOT_ALLOWED</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20220517 21:37:10.535" endtime="20220517 21:37:10.535"/>
+</kw>
+<status status="PASS" starttime="20220517 21:37:10.509" endtime="20220517 21:37:10.535"/>
+</kw>
+<status status="PASS" starttime="20220517 21:37:10.508" endtime="20220517 21:37:10.535"/>
+</kw>
+<test id="s1-t1" name="TNR 1">
+<kw name="TestSetup" library="baseTest" type="SETUP">
+<kw name="Import Resource" library="BuiltIn">
+<arg>c:\\Users\\aassoula\\OneDrive - Capgemini\\Desktop\\Anah\\DEMO RBF\\Autom\\TESTS/Env/ENV_${ENV}.robot</arg>
+<doc>Imports a resource file with the given path.</doc>
+<status status="PASS" starttime="20220517 21:37:10.542" endtime="20220517 21:37:10.544"/>
+</kw>
+<kw name="Import Resource" library="BuiltIn">
+<arg>c:\\Users\\aassoula\\OneDrive - Capgemini\\Desktop\\Anah\\DEMO RBF\\Autom\\TESTS/Data/DATA_${ENV}.robot</arg>
+<doc>Imports a resource file with the given path.</doc>
+<status status="PASS" starttime="20220517 21:37:10.544" endtime="20220517 21:37:10.553"/>
+</kw>
+<kw name="Test Setup" library="baseSocle">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${EMPTY}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220517 21:37:10.555" endtime="20220517 21:37:10.559"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>START TEST</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220517 21:37:10.559" endtime="20220517 21:37:10.560"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${isTestWEB}</var>
+<arg>"""WEB""" in """${TEST TAGS}"""</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220517 21:37:10.561" level="INFO">${isTestWEB} = True</msg>
+<status status="PASS" starttime="20220517 21:37:10.561" endtime="20220517 21:37:10.561"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${isTestWEB}</arg>
+<arg>BuiltIn.Run Keyword</arg>
+<arg>SELENIUM.Open ${PLATFORM}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>SELENIUM.Open ${PLATFORM}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Open CHROME" library="selenium">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220517 21:37:10.564" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220517 21:37:10.564" endtime="20220517 21:37:14.180"/>
+</kw>
+<status status="PASS" starttime="20220517 21:37:10.564" endtime="20220517 21:37:14.181"/>
+</kw>
+<status status="PASS" starttime="20220517 21:37:10.563" endtime="20220517 21:37:14.181"/>
+</kw>
+<status status="PASS" starttime="20220517 21:37:10.562" endtime="20220517 21:37:14.181"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${SCREEN_SIZE}</var>
+<arg>${SCREEN_SIZES_ALLOWED}</arg>
+<arg>${SCREEN}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20220517 21:37:14.184" level="INFO">${SCREEN_SIZE} = 1260</msg>
+<status status="PASS" starttime="20220517 21:37:14.182" endtime="20220517 21:37:14.184"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${isTestWEB}</arg>
+<arg>BuiltIn.Run Keyword</arg>
+<arg>SELENIUM.Init Conf</arg>
+<arg>screen=${SCREEN_SIZE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>SELENIUM.Init Conf</arg>
+<arg>screen=${SCREEN_SIZE}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Init Conf" library="selenium">
+<arg>screen=${SCREEN_SIZE}</arg>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>${SELENIUM_TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20220517 21:37:14.191" endtime="20220517 21:37:14.198"/>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<arg>${SELENIUM_IMPLICITWAIT}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220517 21:37:14.198" endtime="20220517 21:37:14.202"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${SELENIUM_SPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220517 21:37:14.203" endtime="20220517 21:37:14.205"/>
+</kw>
+<if>
+<branch type="IF" condition="${screen} == ${0}">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20220517 21:37:14.211" endtime="20220517 21:37:14.211"/>
+</kw>
+<status status="NOT RUN" starttime="20220517 21:37:14.210" endtime="20220517 21:37:14.212"/>
+</branch>
+<branch type="ELSE">
+<kw name="Set Window Size" library="SeleniumLibrary">
+<arg>height=850</arg>
+<arg>width=${screen}</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" starttime="20220517 21:37:14.212" endtime="20220517 21:37:14.401"/>
+</kw>
+<status status="PASS" starttime="20220517 21:37:14.212" endtime="20220517 21:37:14.402"/>
+</branch>
+<status status="PASS" starttime="20220517 21:37:14.205" endtime="20220517 21:37:14.402"/>
+</if>
+<status status="PASS" starttime="20220517 21:37:14.187" endtime="20220517 21:37:14.402"/>
+</kw>
+<status status="PASS" starttime="20220517 21:37:14.185" endtime="20220517 21:37:14.402"/>
+</kw>
+<status status="PASS" starttime="20220517 21:37:14.184" endtime="20220517 21:37:14.402"/>
+</kw>
+<status status="PASS" starttime="20220517 21:37:10.553" endtime="20220517 21:37:14.403"/>
+</kw>
+<status status="PASS" starttime="20220517 21:37:10.541" endtime="20220517 21:37:14.403"/>
+</kw>
+<kw name="Montage du dossier de subvention pour un profil TMO" library="MontageDossierSub">
+<doc>L'utilisateur accède à la page de connexion</doc>
+<kw name="lancer le navigateur et l'environnement" library="PreparationEnv">
+<arg>${site_web}[url]</arg>
+<arg>${site_web}[title]</arg>
+<doc>Lancement de l'application dans un navigateur
+${URL} Url de l'application à lancer
+${browser} Navigateur à utiliser
+${exceptedTitle} Titre de la page attendue</doc>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220517 21:37:14.436" level="INFO">Opening url 'https://auth-preprod.anah.fr/saml/singleSignOn'</msg>
+<status status="PASS" starttime="20220517 21:37:14.435" endtime="20220517 21:37:15.313"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220517 21:37:15.313" endtime="20220517 21:37:15.460"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${currentTitle}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20220517 21:37:15.473" level="INFO">${currentTitle} = Portail d'authentification</msg>
+<status status="PASS" starttime="20220517 21:37:15.460" endtime="20220517 21:37:15.473"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${exceptedTitle}</arg>
+<arg>${currentTitle}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220517 21:37:15.473" endtime="20220517 21:37:15.475"/>
+</kw>
+<status status="PASS" starttime="20220517 21:37:14.432" endtime="20220517 21:37:15.475"/>
+</kw>
+<kw name="se connecter au compte demandeur par le portail SSO" library="Login">
+<arg>sophiec79e1102@yopmail.com</arg>
+<arg>123Rules*</arg>
+<doc>Connexion à l'application
+${input_userName} Username de l'utilisateur
+${input_pwd} Mot de passe de l'utilisateur</doc>
+<kw name="Kw_load_login_page" library="Login">
+<doc>Vérifie que les éléments de la pages de connexion sont bien présents</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${loc_email}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220517 21:37:15.494" endtime="20220517 21:37:15.548"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${loc_mdp}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220517 21:37:15.549" endtime="20220517 21:37:15.596"/>
+</kw>
+<status status="PASS" starttime="20220517 21:37:15.493" endtime="20220517 21:37:15.596"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${loc_email}</arg>
+<arg>${input_userName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220517 21:37:15.597" level="INFO">Typing text 'sophiec79e1102@yopmail.com' into text field '//input[@id="userfield"]'.</msg>
+<status status="PASS" starttime="20220517 21:37:15.597" endtime="20220517 21:37:15.773"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${loc_mdp}</arg>
+<arg>${input_pwd}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220517 21:37:15.774" level="INFO">Typing password into text field '//input[@id="passwordfield"]'.</msg>
+<msg timestamp="20220517 21:37:15.837" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220517 21:37:15.957" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220517 21:37:15.773" endtime="20220517 21:37:15.957"/>
+</kw>
+<kw name="Click If Element Is Enabled" library="selenium">
+<arg>${loc_valider}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10</arg>
+<arg>1s</arg>
+<arg>Scroll Element Into View</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220517 21:37:15.957" endtime="20220517 21:37:16.285"/>
+</kw>
+<status status="PASS" starttime="20220517 21:37:15.957" endtime="20220517 21:37:16.285"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220517 21:37:16.285" endtime="20220517 21:37:16.369"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>10</arg>
+<arg>1s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220517 21:37:16.374" level="INFO">Clicking element '//button[@type="submit"]/span'.</msg>
+<status status="PASS" starttime="20220517 21:37:16.372" endtime="20220517 21:37:17.279"/>
+</kw>
+<status status="PASS" starttime="20220517 21:37:16.371" endtime="20220517 21:37:17.279"/>
+</kw>
+<status status="PASS" starttime="20220517 21:37:15.957" endtime="20220517 21:37:17.279"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<arg>Wait Until Keyword Succeeds</arg>
+<arg>1s</arg>
+<arg>10s</arg>
+<arg>SeleniumLibrary.Input Text</arg>
+<arg>${loc_valider}</arg>
+<arg>${input_userName}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>1s</arg>
+<arg>10s</arg>
+<arg>SeleniumLibrary.Input Text</arg>
+<arg>${loc_valider}</arg>
+<arg>${input_userName}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${loc_valider}</arg>
+<arg>${input_userName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220517 21:37:17.284" level="INFO">Typing text 'sophiec79e1102@yopmail.com' into text field '//button[@type="submit"]/span'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220517 21:37:23.221" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220517 21:37:22.910" endtime="20220517 21:37:23.221"/>
+</kw>
+<msg timestamp="20220517 21:37:23.228" level="FAIL">Element with locator '//button[@type="submit"]/span' not found.</msg>
+<status status="FAIL" starttime="20220517 21:37:17.283" endtime="20220517 21:37:23.228"/>
+</kw>
+<msg timestamp="20220517 21:37:23.228" level="FAIL">Keyword 'SeleniumLibrary.Input Text' failed after retrying for 1 second. The last error was: Element with locator '//button[@type="submit"]/span' not found.</msg>
+<status status="FAIL" starttime="20220517 21:37:17.282" endtime="20220517 21:37:23.229"/>
+</kw>
+<status status="PASS" starttime="20220517 21:37:17.281" endtime="20220517 21:37:23.229"/>
+</kw>
+<status status="PASS" starttime="20220517 21:37:15.491" endtime="20220517 21:37:23.229"/>
+</kw>
+<kw name="copier le numero de dossier et acceder au dossier" library="MyApplications">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${NumDossier}</var>
+<arg>${loc-NumDossier}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220517 21:37:28.603" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220517 21:37:28.280" endtime="20220517 21:37:28.604"/>
+</kw>
+<msg timestamp="20220517 21:37:28.608" level="FAIL">Element with locator '//*[@id="$PD_pyMyCasesTree$ppxResults$l1"]//div[@data-test-id='2019100915472206281040439' and contains(text(),'MPR')]' not found.</msg>
+<status status="FAIL" starttime="20220517 21:37:23.230" endtime="20220517 21:37:28.608"/>
+</kw>
+<kw name="Click If Element Is Enabled" library="selenium">
+<arg>${VoirDossier}</arg>
+<status status="NOT RUN" starttime="20220517 21:37:28.609" endtime="20220517 21:37:28.609"/>
+</kw>
+<status status="FAIL" starttime="20220517 21:37:23.229" endtime="20220517 21:37:28.609"/>
+</kw>
+<kw name="Completer ma demande de solde" library="Dossier">
+<status status="NOT RUN" starttime="20220517 21:37:28.610" endtime="20220517 21:37:28.610"/>
+</kw>
+<kw name="choisir travaux d'isolation" library="Travaux">
+<status status="NOT RUN" starttime="20220517 21:37:28.611" endtime="20220517 21:37:28.611"/>
+</kw>
+<kw name="choisir travaux d'isolation intern" library="SousTravaux">
+<status status="NOT RUN" starttime="20220517 21:37:28.611" endtime="20220517 21:37:28.612"/>
+</kw>
+<kw name="renseingner les informations travaux d'isolation interieur" library="InfoTravaux">
+<status status="NOT RUN" starttime="20220517 21:37:28.612" endtime="20220517 21:37:28.613"/>
+</kw>
+<kw name="renseingner les informations travaux d'isolation interieur" library="Siret">
+<status status="NOT RUN" starttime="20220517 21:37:28.613" endtime="20220517 21:37:28.613"/>
+</kw>
+<kw name="televerser le premier devis" library="Devis">
+<status status="NOT RUN" starttime="20220517 21:37:28.614" endtime="20220517 21:37:28.614"/>
+</kw>
+<kw name="renseingner le montant du premier travaux" library="Somme">
+<status status="NOT RUN" starttime="20220517 21:37:28.615" endtime="20220517 21:37:28.615"/>
+</kw>
+<kw name=" choisir non pour les aides" library="Cee">
+<status status="NOT RUN" starttime="20220517 21:37:28.615" endtime="20220517 21:37:28.615"/>
+</kw>
+<kw name=" verifier la syntèse et Continuer" library="Syntese">
+<status status="NOT RUN" starttime="20220517 21:37:28.616" endtime="20220517 21:37:28.616"/>
+</kw>
+<kw name=" deposer la demande de subvention" library="Depot">
+<status status="NOT RUN" starttime="20220517 21:37:28.616" endtime="20220517 21:37:28.617"/>
+</kw>
+<status status="FAIL" starttime="20220517 21:37:14.406" endtime="20220517 21:37:28.617"/>
+</kw>
+<kw name="TestTeardown" library="baseTest" type="TEARDOWN">
+<kw name="Test Teardown" library="baseSocle">
+<kw name="Log To Console" library="BuiltIn">
+<arg>fwk_test_teardown</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220517 21:37:28.622" endtime="20220517 21:37:28.623"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${isTestWEB}</var>
+<arg>"""WEB""" in """${TEST TAGS}"""</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20220517 21:37:28.625" level="INFO">${isTestWEB} = True</msg>
+<status status="PASS" starttime="20220517 21:37:28.624" endtime="20220517 21:37:28.625"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${isTestWEB}</arg>
+<arg>BuiltIn.Run Keyword If Test Failed</arg>
+<arg>SELENIUM.Capture Step ScreenShot</arg>
+<arg>ERROR</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Run Keyword If Test Failed" library="BuiltIn">
+<arg>SELENIUM.Capture Step ScreenShot</arg>
+<arg>ERROR</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<kw name="Capture Step ScreenShot" library="selenium">
+<arg>ERROR</arg>
+<doc>Capture avec règle de nommage du fichier
+Le step permet d'identifier l'étape et de faire plusieurs captures par test</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>${OUTPUT DIR}${/}${TEST NAME}_${step}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220517 21:37:28.901" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="TNR%201_ERROR.png"&gt;&lt;img src="TNR%201_ERROR.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220517 21:37:28.629" endtime="20220517 21:37:28.901"/>
+</kw>
+<status status="PASS" starttime="20220517 21:37:28.628" endtime="20220517 21:37:28.901"/>
+</kw>
+<status status="PASS" starttime="20220517 21:37:28.627" endtime="20220517 21:37:28.901"/>
+</kw>
+<status status="PASS" starttime="20220517 21:37:28.626" endtime="20220517 21:37:28.901"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${isTestWEB}</arg>
+<arg>BuiltIn.Run Keyword If Test Failed</arg>
+<arg>SELENIUM.Capture Step Html Source</arg>
+<arg>ERROR</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Run Keyword If Test Failed" library="BuiltIn">
+<arg>SELENIUM.Capture Step Html Source</arg>
+<arg>ERROR</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<kw name="Capture Step Html Source" library="selenium">
+<arg>ERROR</arg>
+<doc>Capture du source de la page
+Doit etre utilisé systématiquement dans le Test Teardown en cas de failed
+Cela permet d'inspecter sur ce source sans avoir besoin de renaviguer manuellement
+Gain de temps en maintenance</doc>
+<kw name="Get Source" library="SeleniumLibrary">
+<var>${html}</var>
+<doc>Returns the entire HTML source of the current page or frame.</doc>
+<msg timestamp="20220517 21:37:28.939" level="INFO">${html} = &lt;html lang="fr-FR" class="wk chrome yui-skin-sam"&gt;&lt;head&gt;            &lt;meta name="viewport" content="initial-scale=1, width=device-width"&gt; &lt;!--Added 'user-scalable=no' to disable zoom in/out in HC/PIMC ...</msg>
+<status status="PASS" starttime="20220517 21:37:28.904" endtime="20220517 21:37:28.939"/>
+</kw>
+<kw name="Create File" library="OperatingSystem">
+<arg>path=${OUTPUT DIR}${/}${TEST NAME}_${step}.html</arg>
+<arg>content=${html}, encoding=UTF-8</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<msg timestamp="20220517 21:37:28.960" level="INFO" html="true">Created file '&lt;a href="file://C:\Users\aassoula\OneDrive - Capgemini\Desktop\Anah\DEMO RBF\Autom\TNR 1_ERROR.html"&gt;C:\Users\aassoula\OneDrive - Capgemini\Desktop\Anah\DEMO RBF\Autom\TNR 1_ERROR.html&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20220517 21:37:28.939" endtime="20220517 21:37:28.960"/>
+</kw>
+<status status="PASS" starttime="20220517 21:37:28.903" endtime="20220517 21:37:28.960"/>
+</kw>
+<status status="PASS" starttime="20220517 21:37:28.903" endtime="20220517 21:37:28.960"/>
+</kw>
+<status status="PASS" starttime="20220517 21:37:28.902" endtime="20220517 21:37:28.960"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${isTestWEB}</arg>
+<arg>BuiltIn.Run Keyword</arg>
+<arg>SELENIUM.Close Browsers</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>SELENIUM.Close Browsers</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Close Browsers" library="selenium">
+<doc>Fermeture de tous les navigateurs</doc>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220517 21:37:28.960" endtime="20220517 21:37:31.669"/>
+</kw>
+<status status="PASS" starttime="20220517 21:37:28.960" endtime="20220517 21:37:31.670"/>
+</kw>
+<status status="PASS" starttime="20220517 21:37:28.960" endtime="20220517 21:37:31.670"/>
+</kw>
+<status status="PASS" starttime="20220517 21:37:28.960" endtime="20220517 21:37:31.670"/>
+</kw>
+<status status="PASS" starttime="20220517 21:37:28.621" endtime="20220517 21:37:31.670"/>
+</kw>
+<status status="PASS" starttime="20220517 21:37:28.619" endtime="20220517 21:37:31.670"/>
+</kw>
+<tag>WEB</tag>
+<status status="FAIL" starttime="20220517 21:37:10.535" endtime="20220517 21:37:31.673">Element with locator '//*[@id="$PD_pyMyCasesTree$ppxResults$l1"]//div[@data-test-id='2019100915472206281040439' and contains(text(),'MPR')]' not found.</status>
+</test>
+<kw name="SuiteTeardown" library="baseTest" type="TEARDOWN">
+<kw name="Suite Teardown" library="baseSocle">
+<kw name="Log To Console" library="BuiltIn">
+<arg>END SUITE</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220517 21:37:31.681" endtime="20220517 21:37:31.682"/>
+</kw>
+<status status="PASS" starttime="20220517 21:37:31.679" endtime="20220517 21:37:31.683"/>
+</kw>
+<status status="PASS" starttime="20220517 21:37:31.678" endtime="20220517 21:37:31.683"/>
+</kw>
+<doc>Test sur toutes les actions de la page de connexion pour tous les rôles.</doc>
+<status status="FAIL" starttime="20220517 21:37:09.036" endtime="20220517 21:37:31.683"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">WEB</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="TNR1">TNR1</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220517 21:37:10.390" level="WARN">Imported resource file 'c:\Users\aassoula\OneDrive - Capgemini\Desktop\Anah\DEMO RBF\Autom\TESTS\Web\POMs\NumFi.robot' is empty.</msg>
+</errors>
+</robot>

@@ -18,5 +18,6 @@ renseingner les informations travaux d'isolation interieur
   Wait Until Keyword Succeeds    10    1s    Input Text           ${loc_resistance}     5
   Wait Until Keyword Succeeds    10    1s    Input Text           ${loc_resistance}     5
   Click If Element Is Enabled                  ${loc_continuer_3}   
+  
 
  
