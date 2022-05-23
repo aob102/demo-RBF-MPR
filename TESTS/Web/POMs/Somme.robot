@@ -6,7 +6,7 @@ Documentation    Contenant les éléments relatifs à la page de connexion
 
 *** Variables ***
 ${loc_montant1}                  //div[@data-test-id='20190903160907043564-1']//input[@id='AmountTTCPlanFin']
-${loc_continuer_4}                 //button[@name='pyCaseActionAreaButtons_pyWorkPage_46']
+${loc_continuer_4}                 //button[@name='pyCaseActionAreaButtons_pyWorkPage_48']
 *** Keywords ***
 renseingner le montant du premier travaux
 
