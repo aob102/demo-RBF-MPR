@@ -7,7 +7,7 @@ Documentation    Contenant les éléments relatifs à la page de connexion
 
 *** Variables ***
 ${Demandeur}                                   //*[@name='CompleterMaDemande_pyWorkPage_33']
-${loc_continuer}                               //*[@name='pyCaseActionAreaButtons_pyWorkPage_23']
+${loc_continuer}                               //*[@name='pyCaseActionAreaButtons_pyWorkPage_122']
 
 *** Keywords ***
 
