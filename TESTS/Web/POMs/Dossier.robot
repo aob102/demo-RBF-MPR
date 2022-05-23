@@ -5,7 +5,7 @@ Resource    ../../../SOCLE/Libs/selenium.robot
 Documentation    Contenant les éléments relatifs à la page de connexion
 
 *** Variables ***
-${loc_completerMaDemande}                  //a[@name="ReviewAndDownloadSection_pyWorkPage_22"]
+${loc_completerMaDemande}                  //a[@name="ReviewAndDownloadSection_pyWorkPage_192"]
 
 *** Keywords ***
 Completer ma demande de solde
