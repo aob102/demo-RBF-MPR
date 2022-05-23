@@ -3,6 +3,7 @@ Library    SeleniumLibrary
 Resource    ../../Data/Locators.robot
 Resource    ../../../SOCLE/Libs/selenium.robot
 Resource    ../../../SOCLE/Libs/selenium.robot
+Resource    ../../Env/ENV_RECETTE.robot
 Documentation    Contenant les éléments relatifs à la page de connexion
 
 *** Variables ***
@@ -27,9 +28,19 @@ se connecter au compte demandeur par le portail SSO
     SeleniumLibrary.Input Text    ${loc_email}    ${input_userName}    
     SeleniumLibrary.Input Password    ${loc_mdp}    ${input_pwd}
     Click If Element Is Enabled    ${loc_valider}
-    Run Keyword And Ignore Error      Wait Until Keyword Succeeds    1s    10s    SeleniumLibrary.Input Text    ${loc_valider}   ${input_userName}  
+    
       
-
+se connecter au compte Adminstrateur Fonctionnelle par le portail PEGA
+    [Documentation]    Connexion à l'application
+    ...    ${input_userName} Username de l'utilisateur
+    ...    ${input_pwd} Mot de passe de l'utilisateur
+    [Arguments]    ${input_userName}    ${input_pwd}
+     Go to  ${site_PEGA}
+    Wait Until Element Is Visible    ${loc_email_PEGA}
+    SeleniumLibrary.Input Text    ${loc_email_PEGA}    ${input_userName}    
+    SeleniumLibrary.Input Password    ${loc_mdp_PEGA}    ${input_pwd}
+    Click If Element Is Enabled    ${loc_valider_PEGA}
+   
 
 
 Kw_load_login_page

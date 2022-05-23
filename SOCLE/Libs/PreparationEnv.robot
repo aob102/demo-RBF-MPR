@@ -9,11 +9,11 @@ lancer le navigateur et l'environnement
     ...    ${URL} Url de l'application à lancer
     ...    ${browser} Navigateur à utiliser
     ...    ${exceptedTitle} Titre de la page attendue
-    [Arguments]    ${URL}      ${exceptedTitle}   
+    [Arguments]    ${URL}     
     SeleniumLibrary.Go To    url=${URL}
     SeleniumLibrary.Maximize Browser Window
     ${currentTitle}    SeleniumLibrary.Get Title
-    BuiltIn.Should Be Equal As Strings    ${exceptedTitle}    ${currentTitle}
+
      
 Kw_close_all_browsers
     [Documentation]    Fermeture de tous les navigateurs ouverts

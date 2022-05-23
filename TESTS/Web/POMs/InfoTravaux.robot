@@ -17,6 +17,11 @@ renseingner les informations travaux d'isolation interieur
   Click If Element Is Enabled                  ${loc_resistance}
   Wait Until Keyword Succeeds    10    1s    Input Text           ${loc_resistance}     5
   Wait Until Keyword Succeeds    10    1s    Input Text           ${loc_resistance}     5
+  ${resitance}  Get Text    ${loc_resistance}
+ # IF    ${resitance} != '5'
+  Wait Until Keyword Succeeds    10    1s    Input Text           ${loc_resistance}     5  
+      
+  #END
   Click If Element Is Enabled                  ${loc_continuer_3}   
   
 

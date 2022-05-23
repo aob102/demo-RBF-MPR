@@ -308,7 +308,7 @@ Switch To Main Window
     SeleniumLibrary.Switch Window    MAIN
 Click If Element Is Enabled
   [Arguments]       ${locator}
-  Wait Until Keyword Succeeds    10    1s    Scroll Element Into View    ${locator}
+  Wait Until Keyword Succeeds    20    1s    Scroll Element Into View    ${locator}
   Wait Until Element Is Enabled    ${locator}
-  Wait Until Keyword Succeeds    10    1s      Click Element    ${locator}
+  Wait Until Keyword Succeeds    20    1s      Click Element    ${locator}
   

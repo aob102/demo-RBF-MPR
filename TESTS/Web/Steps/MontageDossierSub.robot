@@ -21,15 +21,18 @@ Resource    ../POMs/SousTravaux.robot
 Resource    ../POMs/Travaux.robot
 Resource    ../POMs/TypeChauffage.robot
 Resource    ../../Data/Comptes.robot
-Resource  ../../Env/ENV_RECETTE.robot
+Resource    ../../Env/ENV_RECETTE.robot
 Resource    ../../../SOCLE/Libs/PreparationEnv.robot
+Resource    ../POMs/WB1.robot
+Resource    ../POMs/WL1.robot
+Resource    ../POMs/DossierBO.robot
 #Resource    ../Web/Steps/StepsConnexion.robot
 *** Keywords ***
 
 Montage du dossier 
      [Documentation]    L'utilisateur accède à la page de connexion   
-     PreparationEnv.lancer le navigateur et l'environnement  ${site_web}[url]     ${site_web}[title]
-     Login.se connecter au compte demandeur par le portail SSO     patriceabe43c4@yopmail.com    123Rules*
+     PreparationEnv.lancer le navigateur et l'environnement  ${site_web}[url]    
+     Login.se connecter au compte demandeur par le portail SSO     rbf1@yopmail.com    123Rules*
      MyApplications.copier le numero de dossier et acceder au dossier
      Dossier.Completer ma demande de solde
      Mandataire.deposer une demande sans mandataire
@@ -42,6 +45,15 @@ Montage du dossier
      Cee.choisir non pour les aides
      Syntese.verifier la syntèse et Continuer
      Depot.deposer la demande de subvention 
+Instruction du dossier par l'instructeur
+   SeleniumLibrary.Maximize Browser Window 
+   se connecter au compte Adminstrateur Fonctionnelle par le portail PEGA   InstructeurAAS    @ziZ1994
+   acceder au WB de l'instructeur
+   selectionner le dossier
+   transfer au WL1
+   acceder au WL de l'instructeur
+   Ouvrir le dossier
+   rejeter subvention par instructeur
 
 
 
