@@ -8,7 +8,7 @@ Documentation    Contenant les éléments relatifs à la page de connexion
 *** Variables ***
 ${loc_surface}                  //*[@id='c2ffa2bc']
 ${loc_resistance}               //*[@id='4c70a55f']
-${loc_continuer_3}                //*[@name='pyCaseActionAreaButtons_pyWorkPage_23']
+${loc_continuer_3}                //*[@name='pyCaseActionAreaButtons_pyWorkPage_122']
 *** Keywords ***
 renseingner les informations travaux d'isolation interieur
 
