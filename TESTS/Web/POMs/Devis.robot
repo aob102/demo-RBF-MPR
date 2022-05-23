@@ -9,7 +9,7 @@ ${loc_AjouterDevis1}              //*[@data-test-id='201908301228310488248-1']//
 ${loc_Televerser}                 //*[@data-test-id='201908301228310488248-1']//button[@data-test-id='2019090511254205737677']
 ${loc_Fichier}                    //input[@id='$PpyAttachmentPage$ppxAttachName']
 ${loc_soumettre}                  //button[@id='ModalButtonSubmit']
-${loc_continuer}                  //button[@name='pyCaseActionAreaButtons_pyWorkPage_23']
+${loc_continuer}                  //button[@name='pyCaseActionAreaButtons_pyWorkPage_122']
 *** Keywords ***
 televerser le premier devis
 
